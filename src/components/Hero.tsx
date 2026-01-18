@@ -3,7 +3,6 @@ import Scene3D from './Scene3D';
 import Particles from './Particles';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Shield, TrendingUp } from 'lucide-react';
-import automationImg from '@/assets/automation-hero.jpg';
 
 export default function Hero() {
   return (
@@ -12,7 +11,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 opacity-30"
         style={{
-          backgroundImage: `url(${automationImg})`,
+          backgroundImage: `url(/Gemini_Generated_Image_lddqgelddqgelddq-removebg-preview\ 1.svg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -27,16 +26,31 @@ export default function Hero() {
       />
       
       {/* Particles */}
-      <Particles />
-      
-      {/* 3D Scene */}
-      <Suspense fallback={null}>
-        <Scene3D />
-      </Suspense>
+        <Particles />
+        
+        {/* Background Video */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-10 opacity-60"
+        >
+          <source src="/video1.mp4" type="video/mp4" />
+        </video>
+
+      {/* Gradient overlay on top of video - darker at bottom */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          zIndex: 15,
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.9) 100%)'
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-2xl">
+      <div className="relative z-20 flex items-center justify-center min-h-screen">
+        <div className="text-center max-w-3xl px-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border/50 mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-muted-foreground text-sm">#1 Agence d'Automatisation pour PME</span>
@@ -48,12 +62,12 @@ export default function Hero() {
             <span className="text-gradient-purple">& IA POUR PME</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Réduisez les tâches répétitives, accélérez vos processus, 
             améliorez vos résultats avec nos solutions d'intelligence artificielle.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12">
+          <div className="flex flex-wrap gap-4 mb-12 justify-center">
             <Button variant="cta" size="lg" className="group">
               Découvrir nos services
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -64,7 +78,7 @@ export default function Hero() {
           </div>
 
           {/* Trust badges */}
-          <div className="flex items-center gap-6 text-muted-foreground">
+          <div className="flex items-center justify-center gap-6 text-muted-foreground">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
                 <div 

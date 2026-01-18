@@ -1,5 +1,6 @@
 import { Bot, Workflow, BarChart3, MessageSquareCode, Database, Sparkles } from 'lucide-react';
 import dashboardImg from '@/assets/dashboard-hologram.jpg';
+import { GlassCard } from './GlassCard';
 
 const services = [
   {
@@ -76,6 +77,7 @@ export default function Services() {
               title={service.title}
               description={service.description}
               accent={service.accent as 'cyan' | 'purple'}
+              delay={index * 0.1}
             />
           ))}
         </div>
@@ -106,24 +108,30 @@ function ServiceCard({
   icon, 
   title, 
   description,
-  accent 
+  accent,
+  delay = 0
 }: { 
   icon: React.ReactNode; 
   title: string; 
   description: string;
   accent: 'cyan' | 'purple';
+  delay?: number;
 }) {
   const accentClasses = accent === 'cyan' 
-    ? 'text-primary group-hover:glow-cyan' 
-    : 'text-secondary group-hover:glow-purple';
+    ? 'text-primary' 
+    : 'text-secondary';
 
   return (
-    <div className="glass-card rounded-xl p-6 hover:border-primary/50 transition-all duration-300 group cursor-pointer">
-      <div className={`w-14 h-14 rounded-xl bg-muted flex items-center justify-center mb-5 transition-all duration-300 ${accentClasses}`}>
-        {icon}
+    <GlassCard 
+      glowColor={accent === 'cyan' ? 'cyan' : 'violet'}
+      delay={delay}
+      className="hover:border-primary/50 cursor-pointer h-full"
+    >
+      <div className={`w-14 h-14 rounded-xl bg-muted flex items-center justify-center mb-5 transition-all duration-400 ${accentClasses}`}>
+      {icon}
       </div>
       <h3 className="text-xl font-semibold text-foreground mb-3">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
-    </div>
+    </GlassCard>
   );
 }

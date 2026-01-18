@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
 import { CheckCircle2 } from 'lucide-react';
-import aiBrainImg from '@/assets/ai-brain.jpg';
 
 const stats = [
   { value: 150, suffix: '+', label: 'Clients Satisfaits' },
@@ -83,11 +82,15 @@ export default function About() {
           {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden border border-border/50">
-              <img 
-                src={aiBrainImg} 
-                alt="Intelligence Artificielle" 
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
                 className="w-full aspect-square object-cover"
-              />
+              >
+                <source src="/src/assets/ai_brain.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
             {/* Floating badge */}
