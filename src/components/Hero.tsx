@@ -3,15 +3,26 @@ import Scene3D from './Scene3D';
 import Particles from './Particles';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Shield, TrendingUp } from 'lucide-react';
+import automationImg from '@/assets/automation-hero.jpg';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
+      {/* Background image overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-30"
+        style={{
+          backgroundImage: `url(${automationImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
       {/* Gradient overlay */}
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: 'radial-gradient(ellipse at 70% 50%, hsl(270 50% 15% / 0.4) 0%, transparent 50%), radial-gradient(ellipse at 30% 80%, hsl(186 50% 15% / 0.3) 0%, transparent 40%)'
+          background: 'radial-gradient(ellipse at 70% 50%, hsl(270 50% 15% / 0.5) 0%, transparent 50%), radial-gradient(ellipse at 30% 80%, hsl(186 50% 15% / 0.4) 0%, transparent 40%), linear-gradient(to bottom, hsl(240 10% 4% / 0.7), hsl(240 10% 4% / 0.9))'
         }}
       />
       
@@ -26,6 +37,11 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20">
         <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border/50 mb-6">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-muted-foreground text-sm">#1 Agence d'Automatisation pour PME</span>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             <span className="text-gradient-cyan">AUTOMATISATION</span>
             <br />
@@ -34,17 +50,34 @@ export default function Hero() {
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
             Réduisez les tâches répétitives, accélérez vos processus, 
-            améliorez vos résultats.
+            améliorez vos résultats avec nos solutions d'intelligence artificielle.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-12">
             <Button variant="cta" size="lg" className="group">
               Découvrir nos services
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="outline" size="lg">
-              Nous contacter
+              Réserver un appel
             </Button>
+          </div>
+
+          {/* Trust badges */}
+          <div className="flex items-center gap-6 text-muted-foreground">
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4].map((i) => (
+                <div 
+                  key={i} 
+                  className="w-8 h-8 rounded-full bg-muted border-2 border-background flex items-center justify-center text-xs font-medium"
+                >
+                  {i}
+                </div>
+              ))}
+            </div>
+            <div className="text-sm">
+              <span className="text-foreground font-semibold">150+</span> clients satisfaits
+            </div>
           </div>
         </div>
       </div>
