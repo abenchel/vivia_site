@@ -6,10 +6,10 @@ export default function FinalCTA() {
   const { t } = useLocale();
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-32 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 gradient-bg-animated" />
+        <div className="absolute inset-0 gradient-bg-animated opacity-50" />
         <div className="absolute inset-0 overlay-gradient-violet-cyan" />
       </div>
 

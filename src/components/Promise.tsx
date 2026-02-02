@@ -6,10 +6,9 @@ export default function Promise() {
   const { t } = useLocale();
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0" style={{
-        background: `linear-gradient(45deg, hsla(186, 100%, 15%, 0.25) 0%, hsla(270, 91%, 18%, 0.25) 100%)`
-      }} />
+    <section className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 gradient-bg-animated opacity-35" />
+      <div className="absolute inset-0 overlay-gradient-violet-cyan" />
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
@@ -36,10 +35,18 @@ export default function Promise() {
         </div>
 
         {/* Vision */}
-        <div className="glass-card rounded-xl p-8 max-w-4xl mx-auto mb-8">
+        <div className="glass-card rounded-xl p-8 max-w-4xl mx-auto mb-12">
           <p className="text-xl text-center text-foreground font-medium">
             {t('promise.vision')}
           </p>
+        </div>
+
+        {/* Image Placeholder */}
+        <div className="glass-card rounded-xl p-16 mb-12 max-w-5xl mx-auto flex items-center justify-center">
+          <div className="text-center">
+            <Check className="w-32 h-32 text-primary/30 mx-auto mb-4" />
+            <p className="text-muted-foreground">Emplacement image - Notre Promesse</p>
+          </div>
         </div>
 
         {/* CTA */}

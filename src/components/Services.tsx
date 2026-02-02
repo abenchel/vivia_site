@@ -9,17 +9,16 @@ export default function Services() {
   const accents = ['cyan', 'purple', 'cyan', 'purple'] as const;
 
   return (
-    <section id="services" className="relative py-24 overflow-hidden">
+    <section id="services" className="relative py-32 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0" style={{
-          background: `linear-gradient(135deg, hsla(186, 100%, 15%, 0.3) 0%, hsla(270, 91%, 20%, 0.3) 50%, hsla(186, 100%, 15%, 0.3) 100%)`
-        }} />
+        <div className="absolute inset-0 gradient-bg-animated opacity-40" />
+        <div className="absolute inset-0 overlay-gradient-violet-cyan" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t('solutions.title')}
           </h2>

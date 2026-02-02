@@ -8,10 +8,9 @@ export default function TargetAudience() {
   const icons = [Users, Briefcase, UserCog];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0" style={{
-        background: `linear-gradient(180deg, hsla(270, 91%, 20%, 0.2) 0%, transparent 50%, hsla(186, 100%, 20%, 0.2) 100%)`
-      }} />
+    <section className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 gradient-bg-animated opacity-30" />
+      <div className="absolute inset-0 overlay-gradient-violet-cyan" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -24,7 +23,7 @@ export default function TargetAudience() {
         </p>
 
         {/* Target Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {[0, 1, 2].map((index) => {
             const Icon = icons[index];
             return (
@@ -36,6 +35,14 @@ export default function TargetAudience() {
               />
             );
           })}
+        </div>
+
+        {/* Image Placeholder */}
+        <div className="glass-card rounded-xl p-12 mb-12 flex items-center justify-center">
+          <div className="text-center">
+            <Users className="w-24 h-24 text-primary/30 mx-auto mb-4" />
+            <p className="text-muted-foreground">Emplacement image - Cibles VIVIA</p>
+          </div>
         </div>
 
         {/* Conclusion */}

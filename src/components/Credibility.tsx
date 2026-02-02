@@ -6,10 +6,9 @@ export default function Credibility() {
   const { t } = useLocale();
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0" style={{
-        background: `linear-gradient(-45deg, hsla(270, 91%, 18%, 0.2) 0%, hsla(186, 100%, 18%, 0.3) 50%, hsla(270, 91%, 18%, 0.2) 100%)`
-      }} />
+    <section className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 gradient-bg-animated opacity-30" />
+      <div className="absolute inset-0 overlay-gradient-violet-cyan" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -34,10 +33,18 @@ export default function Credibility() {
         </div>
 
         {/* Method */}
-        <div className="glass-card rounded-xl p-8 mb-12 max-w-4xl mx-auto">
+        <div className="glass-card rounded-xl p-8 mb-16 max-w-4xl mx-auto">
           <p className="text-lg text-center text-foreground">
             {t('credibility.method')}
           </p>
+        </div>
+
+        {/* Image Placeholder */}
+        <div className="glass-card rounded-xl p-16 mb-12 max-w-5xl mx-auto flex items-center justify-center">
+          <div className="text-center">
+            <Check className="w-32 h-32 text-primary/30 mx-auto mb-4" />
+            <p className="text-muted-foreground">Emplacement image - Crédibilité & Partenaires</p>
+          </div>
         </div>
 
         {/* Partners Section */}

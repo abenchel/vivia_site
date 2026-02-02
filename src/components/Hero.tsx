@@ -76,13 +76,13 @@ export default function Hero() {
             </div>
 
             {/* Right Image */}
-            <div className="relative h-[600px] lg:h-[900px]">
+            <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
               <div className="absolute inset-0 glass-card rounded-3xl overflow-hidden group">
                 {/* Hero Image */}
                 <img 
                   src="/Design%20sans%20titre%20(6).svg"
                   alt="VIVIA Solutions"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full md:w-[150%] md:h-[150%] lg:w-[200%] lg:h-[200%] object-cover scale-110 md:scale-115 lg:scale-120 group-hover:scale-105 lg:group-hover:scale-110 transition-transform duration-500 -translate-y-16 md:-translate-y-32 lg:-translate-y-[272px]"
                 />
               </div>
             </div>
