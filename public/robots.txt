@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# sitemap location
+Sitemap: https://your-domain.com/sitemap.xml

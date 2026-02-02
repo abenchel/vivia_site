@@ -28,7 +28,7 @@ export default function Process() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: 'radial-gradient(ellipse at 30% 70%, hsl(186 50% 8% / 0.4) 0%, transparent 50%)'
+          background: `radial-gradient(ellipse at 30% 70%, var(--radial-2) 0%, transparent 50%)`
         }}
       />
 

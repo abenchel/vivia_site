@@ -25,7 +25,7 @@ export default function Contact() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: 'radial-gradient(ellipse at 80% 20%, hsl(270 50% 10% / 0.4) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, hsl(186 50% 8% / 0.3) 0%, transparent 40%)'
+          background: `radial-gradient(ellipse at 80% 20%, var(--radial-1) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, var(--radial-2) 0%, transparent 40%)`
         }}
       />
 

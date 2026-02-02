@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle';
+import LanguageToggle from './LanguageToggle';
 
 const navLinks = [
   { label: 'Accueil', href: '#' },
@@ -53,9 +55,10 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="flex items-center gap-4">
-            <span className="hidden sm:block text-muted-foreground text-sm">EN</span>
+          {/* CTA + Theme Toggle */}
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <LanguageToggle />
             <Button variant="cta" size="sm">
               Réserver un rendez-vous
             </Button>

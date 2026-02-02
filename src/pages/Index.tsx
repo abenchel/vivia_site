@@ -1,9 +1,10 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import TargetAudience from '@/components/TargetAudience';
+import Promise from '@/components/Promise';
 import Services from '@/components/Services';
-import About from '@/components/About';
-import Process from '@/components/Process';
-import Contact from '@/components/Contact';
+import Credibility from '@/components/Credibility';
+import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import { WaveDivider, DotsDivider, DiamondDivider, RippleDivider } from '@/components/SectionDivider';
 
@@ -12,14 +13,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <WaveDivider />
+      <TargetAudience />
+      <Promise />
       <Services />
-      <DotsDivider />
-      <About />
-      <DiamondDivider />
-      <Process />
-      <RippleDivider />
-      <Contact />
+      <Credibility />
+      <FinalCTA />
       <Footer />
     </div>
   );

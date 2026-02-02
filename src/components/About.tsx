@@ -62,7 +62,7 @@ export default function About() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: 'radial-gradient(ellipse at 70% 30%, hsl(270 50% 10% / 0.4) 0%, transparent 50%)'
+          background: `radial-gradient(ellipse at 70% 30%, var(--radial-1) 0%, transparent 50%)`
         }}
       />
 
