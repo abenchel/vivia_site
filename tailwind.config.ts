@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif'],
+        body: ['Fragment Mono', 'ui-monospace', 'monospace'],
+        pixel: ['Pixelify Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

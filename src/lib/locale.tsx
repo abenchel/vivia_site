@@ -6,11 +6,15 @@ const STORAGE_KEY = 'locale';
 
 const TRANSLATIONS: Record<Lang, Record<string, any>> = {
   fr: {
+    seoTitle: "VIVIA fait avancer les organisations en optimisant leur productivité",
+    seoDescription:
+      "Nous aidons les dirigeants, les équipes terrain et les fonctions support à travailler avec plus de clarté, de fluidité et d’efficacité. Des gains de productivité mesurables sur l’ensemble de votre entreprise.",
     hero: {
-      badge: "#1 Agence d'Automatisation pour PME",
+      badge: "#1 Agence d'Automatisation & Transformation Numérique PME",
       h1: "VIVIA fait avancer les organisations en optimisant leur productivité",
-      subtitle: "Nous aidons les dirigeants, les équipes terrain et les fonctions support à travailler avec plus de clarté, de fluidité et d'efficacité, grâce à des solutions concrètes et intégrées.",
-      subtitle2: "Des gains de productivité mesurables sur l'ensemble de votre entreprise.",
+      subtitle:
+        "Nous aidons les dirigeants, les équipes terrain et les fonctions support à travailler avec plus de clarté, de fluidité et d’efficacité, grâce à des solutions concrètes et intégrées.",
+      subtitle2: "Des gains de productivité mesurables sur l’ensemble de votre entreprise.",
       tagline: "Piloter clairement. Exécuter efficacement. Interagir avec justesse.",
       benefits: [
         "Déploiements rapides",
@@ -21,78 +25,80 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
     },
     cta: {
       primary: "Lancer un diagnostic (30 min)",
+      primaryUrl: "/diagnostic",
       secondary: "Découvrir nos solutions",
-      diagnostic: "Démarrer le diagnostic (30 min)",
-      learnMore: "Découvrir les cas d'usage",
-      discoverMethod: "Découvrir notre méthode et notre équipe"
+      secondaryUrl: "/solutions",
+      diagnostic: "Réserver mon audit productivité gratuit",
+      learnMore: "Exemples concrets d'automatisation",
+      discoverMethod: "Notre méthodologie éprouvée"
     },
     targetAudience: {
-      title: "Une solution pensée pour toutes les équipes",
-      intro: "VIVIA s'adresse à toutes les équipes qui font vivre l'organisation au quotidien :",
+      title: "Automatisation PME adaptée à chaque département",
+      intro: "VIVIA digitalise et automatise les processus de toutes vos équipes :",
       targets: [
         {
-          title: "Dirigeants",
-          description: "Vision claire, décisions structurées"
+          title: "Dirigeants & CEO",
+          description: "Tableaux de bord temps réel, décisions data-driven"
         },
         {
-          title: "Équipes terrain",
-          description: "Outils simples, processus fluides"
+          title: "Équipes opérationnelles",
+          description: "Workflows automatisés, 0 tâche manuelle"
         },
         {
-          title: "RH & fonctions support",
-          description: "Information accessible, tâches simplifiées"
+          title: "RH & Administration",
+          description: "Automatisation RH, gestion documentaire intelligente"
         }
       ],
-      conclusion: "Un même système, au service de tous."
+      conclusion: "Une plateforme unifiée. Tous vos outils connectés."
     },
     promise: {
-      title: "Rendre le travail plus simple, plus lisible, plus efficace",
-      intro: "VIVIA conçoit des systèmes qui :",
+      title: "Automatisation & Digitalisation : Transformez votre PME",
+      intro: "Nos solutions d'automatisation permettent de :",
       points: [
-        "Rendent l'information accessible à tous",
-        "Fluidifient l'exécution des tâches quotidiennes",
-        "Structurent les échanges entre équipes"
+        "Éliminer 80% des tâches répétitives grâce à l'IA et l'automatisation",
+        "Fluidifient l’exécution des tâches quotidiennes",
+        "Connecter tous vos outils (Notion, Airtable, Slack, Excel...)"
       ],
-      vision: "Chaque intervention vise un objectif partagé : faire gagner du temps, du confort et de la visibilité à l'ensemble de l'organisation."
+      vision: "Notre mission : libérer votre équipe des tâches sans valeur ajoutée pour se concentrer sur la croissance de votre entreprise."
     },
     solutions: {
-      title: "Des solutions concrètes pour chaque étape de votre organisation",
-      intro: "VIVIA accompagne les organisations autour de quatre grands besoins :",
+      title: "4 Piliers de l'Automatisation & Transformation Digitale PME",
+      intro: "VIVIA automatise et optimise chaque aspect de votre organisation :",
       pillars: [
         {
-          title: "Conseiller",
-          description: "Clarifier la direction et aligner les équipes"
+          title: "Conseil Digital",
+          description: "Audit automatisation, stratégie de transformation numérique"
         },
         {
-          title: "Piloter",
-          description: "Structurer l'information et les actifs"
+          title: "Gestion Intelligente",
+          description: "CRM, ERP, base de données centralisée et automatisée"
         },
         {
-          title: "Exécuter",
+          title: "Automatisation Process",
           description: "Automatiser les processus opérationnels"
         },
         {
-          title: "Interagir",
-          description: "Faciliter la communication interne et externe"
+          title: "Communication Unifiée",
+          description: "Chatbots IA, portails clients, support automatisé"
         }
       ]
     },
     credibility: {
-      title: "Une approche éprouvée, portée par des équipes engagées",
-      intro: "Les solutions VIVIA sont déployées et utilisées au quotidien par :",
+      title: "Expert Automatisation PME | +50 Entreprises Accompagnées",
+      intro: "Nos solutions d'automatisation sont utilisées quotidiennement par :",
       usedBy: [
-        "Des équipes opérationnelles",
-        "Des fonctions support",
-        "Des directions"
+        "+50 PME françaises",
+        "Secteurs : Tech, Services, Retail",
+        "Taille : 10 à 500 employés"
       ],
-      method: "Elles reposent sur une méthode claire, des choix technologiques assumés et un accompagnement pensé pour une adoption durable sur le terrain.",
-      partnersIntro: "VIVIA s'appuie sur un écosystème de partenaires technologiques et métiers reconnus, sélectionnés pour leur fiabilité et leur capacité à s'intégrer aux usages réels des organisations.",
-      transition: "Derrière chaque solution, il y a une méthode, une équipe et une façon de travailler."
+      method: "Méthodologie agile certifiée. Technologies leaders : Make, Zapier, Airtable, n8n. Formation équipe incluse pour une adoption à 100%.",
+      partnersIntro: "Partenaires certifiés : Make, Airtable, Notion, Microsoft, Google Workspace. Technologies éprouvées et sécurisées pour votre transformation digitale.",
+      transition: "Une expertise reconnue. Des résultats mesurables. Un accompagnement sur-mesure."
     },
     finalCTA: {
-      title: "Clarifier. Simplifier. Faire avancer.",
-      subtitle: "Gagner en productivité.",
-      description: "Un échange de 30 minutes permet d'identifier des leviers concrets et utiles pour chaque équipe."
+      title: "Automatisez. Optimisez. Accélérez.",
+      subtitle: "+40% de productivité garantie.",
+      description: "Audit gratuit de 30 minutes : identifiez vos opportunités d'automatisation et estimez vos gains de temps et d'argent."
     }
   },
   en: {

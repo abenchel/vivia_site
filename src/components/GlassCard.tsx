@@ -37,14 +37,14 @@ export function GlassCard({
     setMousePosition({ x, y })
   }
 
-  const baseClasses = `glass p-6 rounded-lg neon-border-loop ${glowClass} transition-all duration-300 backdrop-blur-sm relative overflow-hidden ${className}`
+  const baseClasses = `glass p-6 rounded-lg neon-border-loop ${glowClass} transition-all duration-200 ease-out backdrop-blur-sm relative overflow-hidden ${className}`
 
   const content = (
     <>
       {/* Mouse spotlight effect */}
       {isHovered && (
         <div
-          className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
           style={{
             background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.15), transparent 40%)`
           }}
@@ -63,7 +63,7 @@ export function GlassCard({
         whileHover={{ y: -6, scale: 1.01 }}
         whileTap={{ scale: 0.99 }}
         viewport={{ once: true }}
-        transition={{ delay, duration: 0.5, ease: "easeOut" }}
+        transition={{ delay, duration: 0.5, ease: "easeOut", whileHover: { duration: 0.2 } }}
         className={`${baseClasses} group`}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}

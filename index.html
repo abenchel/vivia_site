@@ -28,18 +28,22 @@
     <link rel="alternate" href="https://your-domain.com/es/" hreflang="es" />
 
     <!-- Prevent theme flash: set initial dark/light class before React mounts -->
-    <style>html{opacity:0;transition:opacity 160ms ease-in}</style>
+    <style>
+      html { 
+        opacity: 0; 
+        transition: opacity 160ms ease-in;
+        background: #000000;
+      }
+      body { 
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
     <script>
       (function() {
         try {
-          var key = 'theme';
-          var stored = localStorage.getItem(key);
-          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (stored === 'dark' || (!stored && prefersDark)) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
+          document.documentElement.classList.add('dark');
         } catch (e) {
           /* ignore */
         }
