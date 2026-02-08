@@ -1,6 +1,7 @@
 import { useLocale } from '@/lib/locale';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Promise() {
   const { t } = useLocale();
@@ -43,26 +44,45 @@ export default function Promise() {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
           <div>
             {/* Title */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left mb-6 ">
+            <motion.h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left mb-6 "
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
               {t('promise.title')}
-            </h2>
+            </motion.h2>
 
             {/* Intro */}
-            <p className="text-base md:text-lg text-foreground/75 text-center md:text-left mb-10 max-w-xl">
+            <motion.p
+              className="text-base md:text-lg text-foreground/75 text-center md:text-left mb-10 max-w-xl"
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+            >
               {t('promise.intro')}
-            </p>
+            </motion.p>
 
             {/* Points */}
             <div className="mb-10 space-y-4">
               {[0, 1, 2].map((index) => (
-                <div key={index} className="flex items-start gap-4 p-4 rounded-xl border border-cyan-500/30 bg-card/40 backdrop-blur hover:bg-primary/5 transition-colors shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-4 p-4 rounded-xl border border-cyan-500/30 bg-card/40 backdrop-blur hover:bg-primary/5 transition-colors shadow-[0_0_20px_rgba(34,211,238,0.15)]"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
+                >
                   <div className="w-7 h-7 rounded-full bg-cyan-400/20 flex items-center justify-center mt-1 flex-shrink-0 shadow-[0_0_12px_rgba(34,211,238,0.35)]">
                     <Check className="w-4 h-4 text-cyan-300" />
                   </div>
                   <p className="text-base md:text-lg text-foreground/85 leading-relaxed">
                     {t(`promise.points.${index}`)}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -78,9 +98,15 @@ export default function Promise() {
               shadow-[0_0_40px_rgba(56,189,248,0.25)]
             " />
 
-            <p className="relative text-lg md:text-xl text-foreground font-medium leading-relaxed">
+            <motion.p
+              className="relative text-lg md:text-xl text-foreground font-medium leading-relaxed"
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+            >
               {t('promise.vision')}
-            </p>
+            </motion.p>
           </div>
           </div>
 
@@ -103,7 +129,7 @@ export default function Promise() {
             {/* Small circular thumbnails */}
             <div className="absolute -left-4 bottom-6 w-24 h-24 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_16px_rgba(34,211,238,0.25)] animate-[float_7s_ease-in-out_infinite]">
               <img
-                src="/home/automatisation-pme-equipes-tableaux-bord.jpg"
+                src="/home/test.jpg"
                 alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
                 className="w-full h-full object-cover"
               />
@@ -119,11 +145,17 @@ export default function Promise() {
         </div>
 
         {/* CTA */}
-        <div className="flex justify-center mt-12">
+        <motion.div
+          className="flex justify-center mt-12"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+        >
           <Button variant="cta" size="lg" className="px-8">
             {t('cta.learnMore')}
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

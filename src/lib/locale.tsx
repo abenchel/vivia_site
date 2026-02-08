@@ -66,19 +66,19 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
       intro: "VIVIA automatise et optimise chaque aspect de votre organisation :",
       pillars: [
         {
-          title: "Conseil Digital",
+          title: "Conseiller",
           description: "Audit automatisation, stratégie de transformation numérique"
         },
         {
-          title: "Gestion Intelligente",
+          title: "Piloter",
           description: "CRM, ERP, base de données centralisée et automatisée"
         },
         {
-          title: "Automatisation Process",
+          title: "Exécuter",
           description: "Automatiser les processus opérationnels"
         },
         {
-          title: "Communication Unifiée",
+          title: "Interagir",
           description: "Chatbots IA, portails clients, support automatisé"
         }
       ]

@@ -18,7 +18,7 @@ export default function Hero() {
   }, [t]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-[100svh] md:min-h-screen overflow-hidden p-10">
       <div className="absolute inset-0 z-0">
         <video 
           src="/video1.mp4"
@@ -39,9 +39,9 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 min-h-screen">
-        <div className="max-w-7xl mx-auto px-10 lg:px-12">
-          <div className="flex items-center justify-center min-h-screen py-12">
+      <div className="relative z-20 min-h-[100svh] md:min-h-screen">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="flex items-center justify-center min-h-[100svh] md:min-h-screen py-10 sm:py-12 lg:py-16">
             
             {/* Center Content */}
             <div className="space-y-6 max-w-4xl text-center">
@@ -55,24 +55,24 @@ export default function Hero() {
               </div>
               
               {/* H1 */}
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent animate-fade-in-up drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent animate-fade-in-up drop-shadow-2xl">
                 {t('hero.h1')}
               </h1>
               
               {/* Subtitles */}
               <div className="space-y-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed font-light">
+                <p className="text-base sm:text-lg lg:text-xl text-foreground/90 leading-relaxed font-light">
                   {t('hero.subtitle')}
                 </p>
-                <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed font-light">
+                <p className="text-base sm:text-lg lg:text-xl text-foreground/90 leading-relaxed font-light">
                   {t('hero.subtitle2')}
                 </p>
               </div>
 
               {/* Tagline */}
               <div className="py-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                <div className="inline-block px-5 py-2 rounded-2xl bg-gradient-to-r from-primary/20 to-cyan-500/20 border border-primary/40 backdrop-blur-sm">
-                  <strong className="text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent font-bold">
+                <div className="inline-block px-4 sm:px-5 py-2 rounded-2xl bg-gradient-to-r from-primary/20 to-cyan-500/20 border border-primary/40 backdrop-blur-sm">
+                  <strong className="text-lg sm:text-xl lg:text-2xl bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent font-bold">
                     {t('hero.tagline')}
                   </strong>
                 </div>
@@ -80,22 +80,22 @@ export default function Hero() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-3 justify-center pt-3 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <Button asChild variant="cta" size="lg" className="group px-6 py-5 text-base font-semibold shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-300">
+                <Button asChild variant="cta" size="lg" className="group px-5 sm:px-6 py-4 sm:py-5 text-base font-semibold shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-300">
                   <a href={t('cta.primaryUrl', '/diagnostic')} aria-label={t('cta.primary')}> 
                     {t('cta.primary')}
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" />
                   </a>
                 </Button>
 
-                <Button asChild variant="outline" size="lg" className="px-6 py-5 text-base font-semibold backdrop-blur-md border-2 hover:bg-card/50 hover:scale-105 transition-all duration-300">
+                <Button asChild variant="outline" size="lg" className="px-5 sm:px-6 py-4 sm:py-5 text-base font-semibold backdrop-blur-md border-2 hover:bg-card/50 hover:scale-105 transition-all duration-300">
                   <a href={t('cta.secondaryUrl', '/solutions')} aria-label={t('cta.secondary')}>
                     {t('cta.secondary')}
                   </a>
                 </Button>
               </div>
 
-        <div className="flex justify-center items-center pt-6 overflow-x-auto">
-            <div className="flex items-center gap-4">
+        <div className="flex justify-center items-center pt-6">
+            <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
               <BenefitBadge text={t('hero.benefits.0')} />
               <BenefitBadge text={t('hero.benefits.1')} />
               <BenefitBadge text={t('hero.benefits.2')} />
@@ -108,7 +108,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Add keyframe animations in your global CSS */}
       <style jsx>{`
         @keyframes fade-in {
           from {

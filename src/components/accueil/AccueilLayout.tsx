@@ -11,11 +11,11 @@ export default function AccueilLayout() {
     <div className="relative">
       
       <div className="relative">
-        <section className="sticky top-0 h-screen z-10">
+        <section className="relative lg:sticky lg:top-0 min-h-[100svh] lg:h-screen z-0">
           <Hero />
         </section>
         
-        <div className="relative z-20 bg-gradient-to-b from-black/90 via-black/95 to-black">
+        <div className="relative z-10 bg-gradient-to-b from-black/90 via-black/95 to-black">
           <section className="py-0">
             <TargetAudience />
           </section>

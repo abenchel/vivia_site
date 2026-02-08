@@ -88,6 +88,7 @@
 import { useLocale } from '@/lib/locale';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Credibility() {
   const { t } = useLocale();
@@ -129,51 +130,94 @@ export default function Credibility() {
       <div className="relative pt-32 md:pt-40 lg:pt-48 pb-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+          <motion.h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             {t('credibility.title')}
-          </h2>
+          </motion.h2>
 
           {/* Intro */}
-          <p className="text-lg md:text-xl text-foreground/80 text-center mb-10">
+          <motion.p
+            className="text-lg md:text-xl text-foreground/80 text-center mb-10"
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+          >
             {t('credibility.intro')}
-          </p>
+          </motion.p>
 
           {/* Used By */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             {[0, 1, 2].map((index) => (
-              <div key={index} className="flex items-center gap-3">
+              <motion.div
+                key={index}
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.4, ease: 'easeOut', delay: index * 0.08 }}
+              >
                 <Check className="w-5 h-5 text-primary" />
                 <span className="text-foreground font-medium">
                   {t(`credibility.usedBy.${index}`)}
                 </span>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Method */}
-          <div className="glass-card rounded-xl p-8 lg:p-10 mb-16 max-w-4xl mx-auto">
+          <motion.div
+            className="glass-card rounded-xl p-8 lg:p-10 mb-16 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <p className="text-lg md:text-xl text-center text-foreground leading-relaxed">
               {t('credibility.method')}
             </p>
-          </div>
+          </motion.div>
 
           {/* Image Placeholder */}
-          <div className="rounded-xl overflow-hidden mb-12 max-w-5xl mx-auto">
+          <motion.div
+            className="rounded-xl overflow-hidden mb-12 max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
+          >
             <img 
               src="/home/vivia-approche-eprouvee-equipes-engagees.jpg"
               alt="Image sombre et réaliste montrant des équipes professionnelles collaborant dans un environnement de travail moderne, illustrant une approche éprouvée et une adoption durable sur le terrain."
               className="w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl"
             />
-          </div>
+          </motion.div>
 
           {/* Partners Section */}
           <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-foreground">
+            <motion.h3
+              className="text-2xl md:text-3xl font-semibold text-center mb-6 text-foreground"
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
               Nos Partenaires
-            </h3>
-            <p className="text-foreground/70 text-center mb-10 max-w-3xl mx-auto text-lg">
+            </motion.h3>
+            <motion.p
+              className="text-foreground/70 text-center mb-10 max-w-3xl mx-auto text-lg"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+            >
               {t('credibility.partnersIntro')}
-            </p>
+            </motion.p>
             
             {/* Partner logos placeholder */}
             <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-10 opacity-60">
@@ -189,16 +233,28 @@ export default function Credibility() {
           </div>
 
           {/* Transition */}
-          <p className="text-xl md:text-2xl font-medium text-center text-foreground mb-10">
+          <motion.p
+            className="text-xl md:text-2xl font-medium text-center text-foreground mb-10"
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+          >
             {t('credibility.transition')}
-          </p>
+          </motion.p>
 
           {/* CTA */}
-          <div className="flex justify-center">
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+          >
             <Button variant="outline" size="lg" className="px-8">
               {t('cta.discoverMethod')}
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

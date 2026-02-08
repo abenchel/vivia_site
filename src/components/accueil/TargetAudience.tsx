@@ -1,6 +1,7 @@
 import { useLocale } from '@/lib/locale';
 import { Button } from '@/components/ui/button';
 import { Users, Briefcase, UserCog } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function TargetAudience() {
   const { t } = useLocale();
@@ -26,26 +27,44 @@ export default function TargetAudience() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
+        <motion.h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
           {t('targetAudience.title')}
-        </h2>
+        </motion.h2>
 
         {/* Intro */}
-        <p className="text-lg md:text-xl text-foreground/80 text-center mb-16 max-w-3xl mx-auto">
+        <motion.p
+          className="text-lg md:text-xl text-foreground/80 text-center mb-16 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+        >
           {t('targetAudience.intro')}
-        </p>
+        </motion.p>
 
         {/* Light Streak */}
         <div className="absolute left-0 top-[340px] h-px w-full bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent animate-[sweep_10s_linear_infinite]" />
 
         {/* Image Placeholder */}
-        <div className="rounded-xl overflow-hidden mb-12 max-w-5xl mx-auto">
+        <motion.div
+          className="rounded-xl overflow-hidden mb-12 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+        >
           <img 
             src="/home/automatisation-pme-equipes-tableaux-bord.jpg"
             alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
             className="w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl"
           />
-        </div>
+        </motion.div>
 
         {/* Target Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
@@ -57,6 +76,7 @@ export default function TargetAudience() {
                 icon={<Icon className="w-8 h-8" />}
                 title={t(`targetAudience.targets.${index}.title`)}
                 description={t(`targetAudience.targets.${index}.description`)}
+                delay={index * 0.1}
               />
             );
           })}
@@ -64,16 +84,28 @@ export default function TargetAudience() {
 
 
         {/* Conclusion */}
-        <p className="text-xl md:text-2xl font-semibold text-center text-foreground mb-10 mt-8">
+        <motion.p
+          className="text-xl md:text-2xl font-semibold text-center text-foreground mb-10 mt-8"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+        >
           {t('targetAudience.conclusion')}
-        </p>
+        </motion.p>
 
         {/* CTA */}
-        <div className="flex justify-center">
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
+        >
           <Button variant="outline" size="lg" className="px-8">
             {t('cta.secondary')}
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -82,19 +114,27 @@ export default function TargetAudience() {
 function TargetCard({ 
   icon, 
   title, 
-  description 
+  description,
+  delay = 0
 }: { 
   icon: React.ReactNode; 
   title: string; 
   description: string;
+  delay?: number;
 }) {
   return (
-    <div className="glass-card rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group text-center">
+    <motion.div
+      className="glass-card rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group text-center"
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: 'easeOut', delay }}
+    >
       <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center mb-6 text-primary group-hover:glow-cyan transition-all duration-300 mx-auto">
         {icon}
       </div>
       <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
-    </div>
+    </motion.div>
   );
 }

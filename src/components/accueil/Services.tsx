@@ -1,6 +1,7 @@
 import { useLocale } from '@/lib/locale';
 import { MessageSquareCode, Database, Zap, Users } from 'lucide-react';
 import { GlassCard } from '../GlassCard';
+import { motion } from 'framer-motion';
 
 export default function Services() {
   const { t } = useLocale();
@@ -13,12 +14,24 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             {t('solutions.title')}
-          </h2>
-          <p className="text-foreground/80 text-lg md:text-xl max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            className="text-foreground/80 text-lg md:text-xl max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+          >
             {t('solutions.intro')}
-          </p>
+          </motion.p>
         </div>
 
         {/* Services Grid - 4 Pillars */}
@@ -32,7 +45,7 @@ export default function Services() {
                 title={t(`solutions.pillars.${index}.title`)}
                 description={t(`solutions.pillars.${index}.description`)}
                 accent={accents[index]}
-                delay={index * 0.1}
+                delay={index * 0.2}
               />
             );
           })}
