@@ -9,11 +9,11 @@ const PostIA2026 = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background border-b border-border/50">
+      <div className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background border-b border-border/50 min-h-[100svh] flex items-center">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         
-        <div className="relative max-w-4xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative max-w-4xl mx-auto px-6 pt-32 pb-16 w-full">
           {/* Back Button */}
           <Button variant="ghost" size="sm" className="mb-8 -ml-2 hover:bg-violet-600/10">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -34,6 +34,16 @@ const PostIA2026 = () => {
           <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-10">
             Panorama des usages concrets de l'IA : support client, automatisation des tâches et pilotage des données.
           </p>
+
+          {/* Hero Image */}
+          <div className="rounded-2xl overflow-hidden border border-border/40 mb-10">
+            <img
+              src="/services/ai.jpg"
+              alt="Illustration futuriste de l'IA appliquée aux PME."
+              className="w-full h-56 md:h-72 object-cover"
+              loading="lazy"
+            />
+          </div>
 
           {/* Meta Information */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">

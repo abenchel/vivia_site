@@ -62,16 +62,16 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
       vision: "Notre mission : libérer votre équipe des tâches sans valeur ajoutée pour se concentrer sur la croissance de votre entreprise."
     },
     solutions: {
-      title: "4 Piliers de l'Automatisation & Transformation Digitale PME",
-      intro: "VIVIA automatise et optimise chaque aspect de votre organisation :",
+      title: "Des solutions concrètes pour chaque étape de votre organisation",
+      intro: "VIVIA accompagne les organisations autour de quatre grands besoins :",
       pillars: [
         {
           title: "Conseiller",
-          description: "Audit automatisation, stratégie de transformation numérique"
+          description: "Clarifier la direction et aligner les équipes"
         },
         {
           title: "Piloter",
-          description: "CRM, ERP, base de données centralisée et automatisée"
+          description: "Structurer l’information et les actifs"
         },
         {
           title: "Exécuter",
@@ -79,7 +79,7 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
         },
         {
           title: "Interagir",
-          description: "Chatbots IA, portails clients, support automatisé"
+          description: "Faciliter la communication interne et externe"
         }
       ]
     },

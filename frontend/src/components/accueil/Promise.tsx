@@ -7,7 +7,7 @@ export default function Promise() {
   const { t } = useLocale();
 
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden py-10 md:py-12 min-h-[100svh] flex items-center">
       
       <div className="absolute top-[-10px] left-0 w-full overflow-hidden leading-none">
         <svg 
@@ -40,12 +40,12 @@ export default function Promise() {
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:100%_6px] animate-[scan_6s_linear_infinite]" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-12 w-full">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
           <div>
             {/* Title */}
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left mb-6 "
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-left mb-4 "
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
@@ -56,7 +56,7 @@ export default function Promise() {
 
             {/* Intro */}
             <motion.p
-              className="text-base md:text-lg text-foreground/75 text-center md:text-left mb-10 max-w-xl"
+              className="text-sm md:text-base text-foreground/75 text-center md:text-left mb-6 max-w-xl"
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
@@ -66,11 +66,11 @@ export default function Promise() {
             </motion.p>
 
             {/* Points */}
-            <div className="mb-10 space-y-4">
+            <div className="mb-6 space-y-3">
               {[0, 1, 2].map((index) => (
                 <motion.div
                   key={index}
-                  className="flex items-start gap-4 p-4 rounded-xl border border-cyan-500/30 bg-card/40 backdrop-blur hover:bg-primary/5 transition-colors shadow-[0_0_20px_rgba(34,211,238,0.15)]"
+                  className="flex items-start gap-3 p-3 rounded-xl border border-cyan-500/30 bg-card/40 backdrop-blur hover:bg-primary/5 transition-colors shadow-[0_0_20px_rgba(34,211,238,0.15)]"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
@@ -79,7 +79,7 @@ export default function Promise() {
                   <div className="w-7 h-7 rounded-full bg-cyan-400/20 flex items-center justify-center mt-1 flex-shrink-0 shadow-[0_0_12px_rgba(34,211,238,0.35)]">
                     <Check className="w-4 h-4 text-cyan-300" />
                   </div>
-                  <p className="text-base md:text-lg text-foreground/85 leading-relaxed">
+                  <p className="text-sm md:text-base text-foreground/85 leading-relaxed">
                     {t(`promise.points.${index}`)}
                   </p>
                 </motion.div>
@@ -87,7 +87,7 @@ export default function Promise() {
             </div>
 
           {/* Vision Statement */}
-            <div className=" relative rounded-2xl p-7 lg:p-9 bg-card/40 backdrop-blur-xl hover:bg-primary/5 transition-all
+            <div className=" relative rounded-2xl p-5 lg:p-6 bg-card/40 backdrop-blur-xl hover:bg-primary/5 transition-all
             shadow-[0_0_30px_rgba(34,211,238,0.2)]">
 
             {/* Glow */}
@@ -99,7 +99,7 @@ export default function Promise() {
             " />
 
             <motion.p
-              className="relative text-lg md:text-xl text-foreground font-medium leading-relaxed"
+              className="relative text-base md:text-lg text-foreground font-medium leading-relaxed"
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
@@ -110,7 +110,7 @@ export default function Promise() {
           </div>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex flex-col items-center lg:items-end">
             {/* Decorative circles */}
             <span className="absolute -left-6 -top-8 w-24 h-24 rounded-full bg-cyan-400/15 blur-[2px] animate-[float_8s_ease-in-out_infinite]" />
             <span className="absolute right-4 -bottom-6 w-12 h-12 rounded-full bg-violet-400/25 animate-[float_9s_ease-in-out_infinite]" />
@@ -118,7 +118,7 @@ export default function Promise() {
             <span className="absolute left-10 bottom-8 w-3 h-3 rounded-full bg-white/60 animate-[twinkle_3s_ease-in-out_infinite]" />
 
             {/* Main circular image */}
-            <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
               <img 
                 src="/home/travail-simple-lisible-efficace-flux-donnees.jpg"
                 alt="Illustration sombre et réaliste représentant un espace de travail digital ultra-détaillé avec hologrammes, écrans et flux lumineux de données. L’image symbolise la simplification du travail, la lisibilité de l’information, la fluidité des tâches quotidiennes et la structuration des échanges entre équipes, tout en mettant en avant l’efficacité, le gain de temps et la visibilité au sein d’une organisation."
@@ -127,26 +127,46 @@ export default function Promise() {
             </div>
 
             {/* Small circular thumbnails */}
-            <div className="absolute -left-4 bottom-6 w-24 h-24 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_16px_rgba(34,211,238,0.25)] animate-[float_7s_ease-in-out_infinite]">
+            <div className="absolute -left-3 bottom-5 w-20 h-20 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_16px_rgba(34,211,238,0.25)] animate-[float_7s_ease-in-out_infinite]">
               <img
                 src="/home/test.jpg"
                 alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -right-6 top-10 w-20 h-20 rounded-full overflow-hidden border border-violet-400/50 shadow-[0_0_24px_rgba(139,92,246,0.45)] animate-[float_6s_ease-in-out_infinite]">
+            <div className="absolute -right-4 top-8 w-16 h-16 rounded-full overflow-hidden border border-violet-400/50 shadow-[0_0_24px_rgba(139,92,246,0.45)] animate-[float_6s_ease-in-out_infinite]">
               <img
                 src="/home/vivia-approche-eprouvee-equipes-engagees.jpg"
                 alt="Image sombre et réaliste montrant des équipes professionnelles collaborant dans un environnement de travail moderne, illustrant une approche éprouvée et une adoption durable sur le terrain."
                 className="w-full h-full object-cover"
               />
             </div>
+
+            {/* Supporting image strip */}
+            <div className="mt-6 grid grid-cols-2 gap-3 w-full max-w-md">
+              <div className="rounded-xl overflow-hidden border border-border/40">
+                <img
+                  src="/services/consulting.jpg"
+                  alt="Session de conseil stratégique et cadrage opérationnel."
+                  className="w-full h-24 md:h-28 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden border border-border/40">
+                <img
+                  src="/services/cloud.jpg"
+                  alt="Infrastructure cloud et intégrations sécurisées."
+                  className="w-full h-24 md:h-28 object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* CTA */}
         <motion.div
-          className="flex justify-center mt-12"
+          className="flex justify-center mt-6"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}

@@ -10,12 +10,12 @@ export default function Services() {
   const accents = ['cyan', 'purple', 'cyan', 'purple'] as const;
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="relative overflow-hidden py-10 md:py-12 min-h-[100svh] flex items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
@@ -24,7 +24,7 @@ export default function Services() {
             {t('solutions.title')}
           </motion.h2>
           <motion.p
-            className="text-foreground/80 text-lg md:text-xl max-w-3xl mx-auto"
+            className="text-foreground/80 text-base md:text-lg max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
@@ -35,7 +35,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid - 4 Pillars */}
-        <div className="grid mb-12  md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid mb-8 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {[0, 1, 2, 3].map((index) => {
             const Icon = icons[index];
             return (
@@ -49,6 +49,34 @@ export default function Services() {
               />
             );
           })}
+        </div>
+
+        {/* Image Showcase */}
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl overflow-hidden border border-border/40">
+            <img
+              src="/services/automation.jpg"
+              alt="Automatisation des processus métiers et workflows intelligents."
+              className="w-full h-32 md:h-40 lg:h-44 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border/40">
+            <img
+              src="/services/data.jpg"
+              alt="Analyse de données et visualisation en temps réel."
+              className="w-full h-32 md:h-40 lg:h-44 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border/40">
+            <img
+              src="/services/training.jpg"
+              alt="Formation des équipes et montée en compétences."
+              className="w-full h-32 md:h-40 lg:h-44 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -82,11 +110,11 @@ function ServiceCard({
       delay={delay}
       className={`${borderClasses} cursor-pointer h-full`}
     >
-      <div className={`w-14 h-14 rounded-xl bg-muted flex items-center justify-center mb-5 transition-all duration-400 ${accentClasses}`}>
+      <div className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-4 transition-all duration-400 ${accentClasses}`}>
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-foreground mb-3">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </GlassCard>
   );
 }

@@ -89,8 +89,13 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <LanguageToggle />
             <div className="hidden sm:block">
-              <Button variant="cta" size="sm">
-                Réserver un rendez-vous
+              <Button
+                asChild
+                variant="cta"
+                size="sm"
+                className="h-12 w-32 rectangle-full p-0 text-[10px] leading-none shadow-lg"
+              >
+                <a href="/diagnostic" aria-label="Réserver un rendez-vous">Réserver un rendez-vous</a>
               </Button>
             </div>
             <button
@@ -107,7 +112,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="mx-3 mb-3 mt-2 rounded-xl bg-black/90 shadow-xl ring-1 ring-white/10">
+          <div className="mx-3 mb-3 mt-2 rounded-xl bg-transparent shadow-none ring-white/10">
             <div className="px-2 pb-4 pt-2 space-y-1 text-right">
             {navLinks.map((link) => (
               <a

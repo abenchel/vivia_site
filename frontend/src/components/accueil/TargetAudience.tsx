@@ -9,7 +9,7 @@ export default function TargetAudience() {
   const icons = [Users, Briefcase, UserCog];
 
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden py-10 md:py-12 min-h-[100svh] flex items-center">
 
 
       
@@ -25,25 +25,25 @@ export default function TargetAudience() {
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:100%_6px] animate-[scan_6s_linear_infinite]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
         {/* Title */}
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           {t('targetAudience.title')}
         </motion.h2>
 
         {/* Intro */}
         <motion.p
-          className="text-lg md:text-xl text-foreground/80 text-center mb-16 max-w-3xl mx-auto"
+          className="text-base md:text-lg text-foreground/80 text-center mb-8 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.07 }}
         >
           {t('targetAudience.intro')}
         </motion.p>
@@ -53,21 +53,21 @@ export default function TargetAudience() {
 
         {/* Image Placeholder */}
         <motion.div
-          className="rounded-xl overflow-hidden mb-12 max-w-5xl mx-auto"
+          className="rounded-xl overflow-hidden mb-8 max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
         >
           <img 
             src="/home/automatisation-pme-equipes-tableaux-bord.jpg"
             alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
-            className="w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl"
+            className="w-full h-44 md:h-52 lg:h-60 object-cover rounded-xl"
           />
         </motion.div>
 
         {/* Target Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-4 lg:gap-6 mb-8">
           {[0, 1, 2].map((index) => {
             const Icon = icons[index];
             return (
@@ -76,7 +76,7 @@ export default function TargetAudience() {
                 icon={<Icon className="w-8 h-8" />}
                 title={t(`targetAudience.targets.${index}.title`)}
                 description={t(`targetAudience.targets.${index}.description`)}
-                delay={index * 0.1}
+                delay={index * 0.3}
               />
             );
           })}
@@ -85,7 +85,7 @@ export default function TargetAudience() {
 
         {/* Conclusion */}
         <motion.p
-          className="text-xl md:text-2xl font-semibold text-center text-foreground mb-10 mt-8"
+          className="text-lg md:text-xl font-semibold text-center text-foreground mb-6 mt-4"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -102,7 +102,11 @@ export default function TargetAudience() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
         >
-          <Button variant="outline" size="lg" className="px-8">
+          <Button
+            variant="outline"
+            size="lg"
+            className="px-6 hover:bg-purple-500/10 hover:border-purple-400"
+          >
             {t('cta.secondary')}
           </Button>
         </motion.div>
@@ -124,17 +128,17 @@ function TargetCard({
 }) {
   return (
     <motion.div
-      className="glass-card rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group text-center"
+      className="glass-card rounded-xl p-6 hover:border-purple-400/50 transition-all duration-200 group text-center"
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, ease: 'easeOut', delay }}
+      transition={{ duration: 0.4, ease: 'easeOut', delay }}
     >
-      <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center mb-6 text-primary group-hover:glow-cyan transition-all duration-300 mx-auto">
+      <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 text-primary group-hover:glow-violet transition-all duration-200 mx-auto">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-lg font-bold text-foreground mb-2">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>
   );
 }

@@ -8,9 +8,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ["f56e-196-89-237-85.ngrok-free.app"],
+    allowedHosts: ["1e69-105-190-210-124.ngrok-free.app"],
     hmr: {
-      host: "f56e-196-89-237-85.ngrok-free.app",
+      host: "1e69-105-190-210-124.ngrok-free.app",
       overlay: false,
     },
   },
