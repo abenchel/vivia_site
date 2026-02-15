@@ -9,15 +9,8 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-muted overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
-        <img
-          src="/services/automation.jpg"
-          alt="Arrière-plan abstrait"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="relative text-center">
+    <div className="flex min-h-screen items-center justify-center bg-muted">
+      <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">404</h1>
         <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
         <a href="/" className="text-primary underline hover:text-primary/90">

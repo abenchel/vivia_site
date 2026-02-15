@@ -37,12 +37,12 @@ const Actualite = () => {
       <Navbar />
       <main className="pt-24 md:pt-28">
         {/* Hero section avec image en haut */}
-        <section className="relative mx-auto max-w-6xl px-6 min-h-[100svh] flex items-center">
+        <section className="relative mx-auto max-w-6xl px-6">
           {/* Image rectangle en haut */}
-          <div className="relative h-[70svh] md:h-[75svh] w-full overflow-hidden rounded-2xl">
+          <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/10" />
             <img 
-              src="/actualite/actualite_image.png" 
+              src="/public/actualite/actualite_image.png" 
               alt="Actualités VIVIA"
               className="h-full w-full object-cover opacity-60"
             />
@@ -78,35 +78,6 @@ const Actualite = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-6 pb-20">
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl overflow-hidden border border-white/10">
-              <img
-                src="/services/consulting.jpg"
-                alt="Échange avec des experts pour piloter la transformation."
-                className="w-full h-40 md:h-48 object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-white/10">
-              <img
-                src="/services/data.jpg"
-                alt="Actualités data et insights en temps réel."
-                className="w-full h-40 md:h-48 object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-white/10">
-              <img
-                src="/services/automation.jpg"
-                alt="Mises à jour produits et automatisations récentes."
-                className="w-full h-40 md:h-48 object-cover"
-                loading="lazy"
-              />
-            </div>
           </div>
         </section>
       </main>

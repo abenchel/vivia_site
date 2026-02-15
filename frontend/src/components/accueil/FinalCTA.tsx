@@ -7,11 +7,11 @@ export default function FinalCTA() {
   const { t } = useLocale();
 
   return (
-    <section className="relative overflow-hidden flex items-center">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center w-full">
+    <section className="relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
         {/* Title */}
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -22,7 +22,7 @@ export default function FinalCTA() {
         
         {/* Subtitle */}
         <motion.p
-          className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary mb-6"
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-10"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -33,7 +33,7 @@ export default function FinalCTA() {
 
         {/* Description */}
         <motion.p
-          className="text-base md:text-lg text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-foreground/80 mb-16 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -49,28 +49,12 @@ export default function FinalCTA() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
         >
-          <Button asChild variant="cta" size="lg" className="group mb-8 text-base px-8 py-5">
-            <a href="/diagnostic">
+          <Button asChild variant="cta" size="lg" className="group mb-16 w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-10 py-4 sm:py-7">
+            <a href="/contact">
               {t('cta.diagnostic')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
-        </motion.div>
-
-        {/* Banner Image */}
-        <motion.div
-          className="rounded-2xl overflow-hidden border border-border/40"
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-        >
-          <img
-            src="/services/automation.jpg"
-            alt="Illustration d'une équipe utilisant des outils d'automatisation." 
-            className="w-full h-40 md:h-48 object-cover"
-            loading="lazy"
-          />
         </motion.div>
       </div>
     </section>

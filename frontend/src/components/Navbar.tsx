@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { useLocale } from '@/lib/locale';
 import ThemeToggle from './ThemeToggle';
 import LanguageToggle from './LanguageToggle';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Services', href: '/#services' },
-  { label: 'À propos', href: '/#about' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Actualités', href: '/actualites' },
-  { label: 'Contact', href: '/#contact' },
+  { labelKey: 'nav.home', href: '/' },
+  { labelKey: 'nav.services', href: '/services' },
+  { labelKey: 'nav.about', href: '/about' },
+  { labelKey: 'nav.blog', href: '/blog' },
+  { labelKey: 'nav.news', href: '/actualites' },
+  { labelKey: 'nav.contact', href: '/contact' },
 ];
 
 export default function Navbar() {
+  const { t } = useLocale();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -76,11 +78,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
-                key={link.label}
+                key={link.labelKey}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
               >
-                {link.label}
+                {t(link.labelKey)}
               </a>
             ))}
           </div>
@@ -95,7 +97,7 @@ export default function Navbar() {
                 size="sm"
                 className="h-12 w-32 rectangle-full p-0 text-[10px] leading-none shadow-lg"
               >
-                <a href="/diagnostic" aria-label="Réserver un rendez-vous">Réserver un rendez-vous</a>
+                <a href="/contact" aria-label={t('nav.appointment')}>{t('nav.appointment')}</a>
               </Button>
             </div>
             <button
@@ -116,12 +118,12 @@ export default function Navbar() {
             <div className="px-2 pb-4 pt-2 space-y-1 text-right">
             {navLinks.map((link) => (
               <a
-                key={link.label}
+                key={link.labelKey}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="block rounded-md px-3 py-2 text-sm font-medium text-white/85 hover:text-white hover:bg-white/10 transition"
               >
-                {link.label}
+                {t(link.labelKey)}
               </a>
             ))}
             </div>
@@ -138,7 +140,7 @@ export default function Navbar() {
           size="sm"
           className="h-12 w-32 rectangle-full p-0 text-[10px] leading-none shadow-lg"
         >
-          <a href="/diagnostic" aria-label="Réserver un rendez-vous">Réserver un rendez-vous</a>
+          <a href="/contact" aria-label={t('nav.appointment')}>{t('nav.appointment')}</a>
         </Button>
       </div>
     </>

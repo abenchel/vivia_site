@@ -13,7 +13,7 @@ export default function Promise() {
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none"
-          className="w-full h-24 md:h-32 lg:h-40"
+          className="w-full h-20 md:h-24 lg:h-28"
         >
           <path 
             d="M0,60 Q600,0 1200,40" 
@@ -36,8 +36,8 @@ export default function Promise() {
         <div className="absolute -right-10 top-[60%] h-px w-[120%] rotate-[6deg] bg-gradient-to-r from-transparent via-violet-300/40 to-transparent animate-[sweep_10s_linear_infinite]" />
         {/* Tech grid dots */}
         <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.6)_1px,transparent_0)] [background-size:28px_28px] animate-[twinkle_5s_ease-in-out_infinite]" />
-        {/* Scanline overlay */}
-        <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:100%_6px] animate-[scan_6s_linear_infinite]" />
+          {/* Scanline overlay */}
+          <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:100%_6px] animate-[scan_6s_linear_infinite]" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-6 lg:px-12 w-full">
@@ -45,7 +45,7 @@ export default function Promise() {
           <div>
             {/* Title */}
             <motion.h2
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-left mb-4 "
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-left mb-4"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
@@ -87,7 +87,7 @@ export default function Promise() {
             </div>
 
           {/* Vision Statement */}
-            <div className=" relative rounded-2xl p-5 lg:p-6 bg-card/40 backdrop-blur-xl hover:bg-primary/5 transition-all
+            <div className="relative rounded-2xl p-5 lg:p-6 bg-card/40 backdrop-blur-xl hover:bg-primary/5 transition-all
             shadow-[0_0_30px_rgba(34,211,238,0.2)]">
 
             {/* Glow */}
@@ -110,7 +110,7 @@ export default function Promise() {
           </div>
           </div>
 
-          <div className="relative flex flex-col items-center lg:items-end">
+          <div className="relative flex justify-center lg:justify-end">
             {/* Decorative circles */}
             <span className="absolute -left-6 -top-8 w-24 h-24 rounded-full bg-cyan-400/15 blur-[2px] animate-[float_8s_ease-in-out_infinite]" />
             <span className="absolute right-4 -bottom-6 w-12 h-12 rounded-full bg-violet-400/25 animate-[float_9s_ease-in-out_infinite]" />
@@ -126,41 +126,22 @@ export default function Promise() {
               />
             </div>
 
-            {/* Small circular thumbnails */}
-            <div className="absolute -left-3 bottom-5 w-20 h-20 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_16px_rgba(34,211,238,0.25)] animate-[float_7s_ease-in-out_infinite]">
-              <img
-                src="/home/test.jpg"
-                alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -right-4 top-8 w-16 h-16 rounded-full overflow-hidden border border-violet-400/50 shadow-[0_0_24px_rgba(139,92,246,0.45)] animate-[float_6s_ease-in-out_infinite]">
-              <img
-                src="/home/vivia-approche-eprouvee-equipes-engagees.jpg"
-                alt="Image sombre et réaliste montrant des équipes professionnelles collaborant dans un environnement de travail moderne, illustrant une approche éprouvée et une adoption durable sur le terrain."
-                className="w-full h-full object-cover"
-              />
-            </div>
+              {/* Small circular thumbnails */}
+              <div className="absolute -left-3 bottom-5 w-20 h-20 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_16px_rgba(34,211,238,0.25)] animate-[float_7s_ease-in-out_infinite]">
+                <img
+                  src="/home/test.jpg"
+                  alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -right-4 top-8 w-16 h-16 rounded-full overflow-hidden border border-violet-400/50 shadow-[0_0_24px_rgba(139,92,246,0.45)] animate-[float_6s_ease-in-out_infinite]">
+                <img
+                  src="/home/vivia-approche-eprouvee-equipes-engagees.jpg"
+                  alt="Image sombre et réaliste montrant des équipes professionnelles collaborant dans un environnement de travail moderne, illustrant une approche éprouvée et une adoption durable sur le terrain."
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* Supporting image strip */}
-            <div className="mt-6 grid grid-cols-2 gap-3 w-full max-w-md">
-              <div className="rounded-xl overflow-hidden border border-border/40">
-                <img
-                  src="/services/consulting.jpg"
-                  alt="Session de conseil stratégique et cadrage opérationnel."
-                  className="w-full h-24 md:h-28 object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden border border-border/40">
-                <img
-                  src="/services/cloud.jpg"
-                  alt="Infrastructure cloud et intégrations sécurisées."
-                  className="w-full h-24 md:h-28 object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
           </div>
         </div>
 
@@ -172,7 +153,7 @@ export default function Promise() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
         >
-          <Button variant="cta" size="lg" className="px-8">
+          <Button variant="cta" size="lg" className="px-6">
             {t('cta.learnMore')}
           </Button>
         </motion.div>

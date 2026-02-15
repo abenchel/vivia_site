@@ -46,56 +46,27 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="pt-24 md:pt-28">
-        <section className="mx-auto max-w-6xl px-6 py-10 min-h-[100svh] flex items-center">
-          <div className="w-full">
-            <div className="flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                Blog
-              </div>
-              <h1 className="text-3xl md:text-5xl font-semibold text-foreground">
-                Insights & guides pour faire grandir votre entreprise
-              </h1>
-              <p className="max-w-2xl text-muted-foreground">
-                Des articles courts et concrets pour accélérer votre transformation digitale.
-              </p>
+        <section className="mx-auto max-w-6xl px-6 py-10">
+          <div className="flex flex-col gap-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Blog
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {topics.map((topic) => (
-                <span
-                  key={topic}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-muted-foreground"
-                >
-                  {topic}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              <div className="rounded-2xl overflow-hidden border border-white/10">
-                <img
-                  src="/services/ai.jpg"
-                  alt="IA appliquée et innovation pour les PME."
-                  className="w-full h-40 md:h-48 object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden border border-white/10">
-                <img
-                  src="/services/automation.jpg"
-                  alt="Automatisation des flux opérationnels."
-                  className="w-full h-40 md:h-48 object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden border border-white/10">
-                <img
-                  src="/services/data.jpg"
-                  alt="Pilotage par la donnée et tableaux de bord."
-                  className="w-full h-40 md:h-48 object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            <h1 className="text-3xl md:text-5xl font-semibold text-foreground">
+              Insights & guides pour faire grandir votre entreprise
+            </h1>
+            <p className="max-w-2xl text-muted-foreground">
+              Des articles courts et concrets pour accélérer votre transformation digitale.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {topics.map((topic) => (
+              <span
+                key={topic}
+                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-muted-foreground"
+              >
+                {topic}
+              </span>
+            ))}
           </div>
         </section>
 

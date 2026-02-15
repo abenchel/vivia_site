@@ -2,22 +2,19 @@ import { Linkedin, Twitter, Instagram, ArrowUp } from 'lucide-react';
 
 const footerLinks = {
   services: [
-    { label: 'Automatisation', href: '#' },
-    { label: 'Intelligence Artificielle', href: '#' },
-    { label: 'Chatbots', href: '#' },
-    { label: 'Analyse de Données', href: '#' }
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Solutions IA', href: '/services' },
+    { label: 'Automatisation', href: '/services' }
   ],
   company: [
-    { label: 'À Propos', href: '/#about' },
+    { label: 'À Propos', href: '/about' },
     { label: 'Blog', href: '/blog' },
     { label: 'Actualités', href: '/actualites' },
-    { label: 'Carrières', href: '#' },
-    { label: 'Contact', href: '/#contact' }
+    { label: 'Contact', href: '/contact' }
   ],
   legal: [
-    { label: 'Mentions Légales', href: '#' },
-    { label: 'Politique de Confidentialité', href: '#' },
-    { label: 'CGV', href: '#' }
+    { label: 'Politique de Confidentialité', href: '/privacy' }
   ]
 };
 

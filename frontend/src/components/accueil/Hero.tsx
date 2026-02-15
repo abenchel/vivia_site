@@ -81,14 +81,14 @@ export default function Hero() {
               {/* CTAs */}
               <div className="flex flex-wrap gap-3 justify-center pt-3 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <Button asChild variant="cta" size="lg" className="group px-5 sm:px-6 py-4 sm:py-5 text-base font-semibold shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-300">
-                  <a href={t('cta.primaryUrl', '/diagnostic')} aria-label={t('cta.primary')}> 
+                  <a href={t('cta.primaryUrl', '/contact')} aria-label={t('cta.primary')}> 
                     {t('cta.primary')}
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" />
                   </a>
                 </Button>
 
                 <Button asChild variant="outline" size="lg" className="px-5 sm:px-6 py-4 sm:py-5 text-base font-semibold backdrop-blur-md border-2 hover:bg-card/50 hover:scale-105 transition-all duration-300">
-                  <a href={t('cta.secondaryUrl', '/solutions')} aria-label={t('cta.secondary')}>
+                  <a href={t('cta.secondaryUrl', '/services')} aria-label={t('cta.secondary')}>
                     {t('cta.secondary')}
                   </a>
                 </Button>

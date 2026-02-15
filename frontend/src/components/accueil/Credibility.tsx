@@ -94,7 +94,7 @@ export default function Credibility() {
   const { t } = useLocale();
 
   return (
-    <section className="relative overflow-hidden ">
+    <section className="relative overflow-hidden min-h-[100svh] flex items-center py-10 md:py-12">
         <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-1/3 right-0 h-72 w-72 rounded-full bg-violet-500/10 blur-3xl animate-[float_12s_ease-in-out_infinite]" />
         <div className="absolute -bottom-16 left-1/4 h-56 w-56 rounded-full bg-blue-500/10 blur-3xl animate-[float_14s_ease-in-out_infinite]" />
@@ -114,7 +114,7 @@ export default function Credibility() {
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none"
-          className="w-full h-24 md:h-32 lg:h-40"
+          className="w-full h-20 md:h-24 lg:h-28"
         >
           <path 
             d="M0,60 Q300,120 600,60 T1200,60" 
@@ -127,7 +127,7 @@ export default function Credibility() {
       </div>
 
       {/* Content Container with top padding to account for the curve */}
-      <div className="relative pt-32 md:pt-40 lg:pt-48 pb-20 px-6 lg:px-12">
+      <div className="relative pt-16 md:pt-20 lg:pt-24 pb-10 px-6 lg:px-12 w-full">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
           <motion.h2
@@ -221,7 +221,7 @@ export default function Credibility() {
             
             {/* Partner logos placeholder */}
             <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 opacity-60">
-              {[1, 2, 3].map((i) => (
+              {[1, 2, 3, 4].map((i) => (
                 <div 
                   key={i} 
                   className="w-24 h-12 rounded-lg bg-muted border border-border flex items-center justify-center"
