@@ -50,14 +50,6 @@ export const aboutValues = [
 
 export const aboutTimeline = [
   {
-    title: "2019",
-    description: "Naissance de VIVIA autour d'un objectif : rendre l'IA accessible aux PME.",
-  },
-  {
-    title: "2021",
-    description: "Déploiement des premières automatisations métiers et dashboards data.",
-  },
-  {
     title: "2024",
     description: "Accélération avec une offre IA appliquée aux opérations et au support client.",
   },

@@ -42,7 +42,7 @@ const Actualite = () => {
           <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/10" />
             <img 
-              src="/public/actualite/actualite_image.png" 
+              src="/actualité/actualite.jpg" 
               alt="Actualités VIVIA"
               className="h-full w-full object-cover opacity-60"
             />

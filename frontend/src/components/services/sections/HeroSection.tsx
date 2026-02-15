@@ -39,28 +39,14 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
       </div>
 
-      <div
-        className={`relative z-10 w-full grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center transition-all duration-1000 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
-        }`}
-      >
+      <div className="relative z-10 w-full grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
         <div className="flex flex-col gap-8">
-          <div 
-            className={`inline-flex self-start items-center gap-2 rounded-full border border-violet-400/30 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 backdrop-blur-md px-5 py-2 text-xs uppercase tracking-[0.25em] text-violet-300 font-semibold shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40 transition-all duration-500 hover:scale-105 hover:border-violet-400/50 cursor-pointer group ${
-              isVisible ? "animate-fade-in-down" : ""
-            }`}
-            style={{ animationDelay: "200ms" }}
-          >
+          <div className="inline-flex self-start items-center gap-2 rounded-full border border-violet-400/30 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 backdrop-blur-md px-5 py-2 text-xs uppercase tracking-[0.25em] text-violet-300 font-semibold shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40 transition-all duration-500 hover:scale-105 hover:border-violet-400/50 cursor-pointer group">
             <Sparkles className="w-3.5 h-3.5 text-violet-400 group-hover:animate-spin" />
             Services Premium
           </div>
 
-          <h1 
-            className={`text-5xl md:text-7xl font-black leading-[1.1] ${
-              isVisible ? "animate-fade-in-up" : ""
-            }`}
-            style={{ animationDelay: "300ms" }}
-          >
+          <h1 className="text-5xl md:text-7xl font-black leading-[1.1]">
             <span className="block text-foreground mb-2">
               Des solutions concrètes pour
             </span>
@@ -69,28 +55,18 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
             </span>
           </h1>
 
-          <p 
-            className={`max-w-xl text-xl text-muted-foreground/90 leading-relaxed ${
-              isVisible ? "animate-fade-in-up" : ""
-            }`}
-            style={{ animationDelay: "400ms" }}
-          >
+          <p className="max-w-xl text-xl text-muted-foreground/90 leading-relaxed">
             Nous combinons automatisation, data et IA pour transformer vos opérations sans perturber votre quotidien.
           </p>
 
-          <div 
-            className={`grid gap-4 sm:grid-cols-3 ${
-              isVisible ? "animate-fade-in-up" : ""
-            }`}
-            style={{ animationDelay: "500ms" }}
-          >
+          <div className="grid gap-4 sm:grid-cols-3">
             {highlights.map((item, index) => (
               <div
                 key={item.title}
                 className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl p-5 hover:border-violet-400/30 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20 cursor-pointer overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 via-cyan-500/0 to-violet-500/0 group-hover:from-violet-500/10 group-hover:via-cyan-500/5 group-hover:to-violet-500/10 transition-all duration-500 rounded-2xl" />
-                
+
                 <div className="relative z-10">
                   <div className="text-3xl mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                     {item.icon}
@@ -102,12 +78,7 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
             ))}
           </div>
 
-          <div 
-            className={`flex flex-wrap gap-4 ${
-              isVisible ? "animate-fade-in-up" : ""
-            }`}
-            style={{ animationDelay: "900ms" }}
-          >
+          <div className="flex flex-wrap gap-4">
             <Button 
               asChild 
               size="lg" 
@@ -133,12 +104,7 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
           </div>
         </div>
 
-        <div 
-          className={`grid gap-4 ${
-            isVisible ? "animate-fade-in-left" : ""
-          }`}
-          style={{ animationDelay: "400ms" }}
-        >
+        <div className="grid gap-4">
           <div className="group relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 hover:scale-[1.03] hover:border-violet-400/50">
             <div className="relative overflow-hidden aspect-[16/10]">
               <img

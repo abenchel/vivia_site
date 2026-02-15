@@ -9,8 +9,9 @@ export default function StorySection() {
             Notre histoire
           </h2>
           <p className="text-muted-foreground">
-            Nous construisons des solutions utiles, simples à adopter et alignées sur les objectifs métier. Notre approche
-            combine stratégie, delivery et accompagnement terrain.
+            VIVIA est en création, mais son équipe apporte une expérience solide. Nous avons conçu et déployé des solutions d'automatisation et d'IA pour plusieurs entreprises, transformant leurs opérations et libérant du temps pour l'essentiel.
+            <br /><br />
+            Avec VIVIA, nous officialisons cette expertise pour aider les PME à accélérer leur transformation digitale, avec une approche simple, utile et axée sur les résultats métier.
           </p>
           <ul className="space-y-4">
             {aboutTimeline.map((item, index) => (
@@ -34,7 +35,7 @@ export default function StorySection() {
         <div className="group relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 hover:scale-[1.03] hover:border-violet-400/50">
           <div className="relative overflow-hidden aspect-[4/3]">
             <img
-              src="/services/automation.jpg"
+              src="/about/team-workshop.jpg"
               alt="Équipe VIVIA en atelier"
               className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1"
               loading="lazy"
