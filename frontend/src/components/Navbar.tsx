@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLocale } from '@/lib/locale';
-import ThemeToggle from './ThemeToggle';
 import LanguageToggle from './LanguageToggle';
 import { Menu, X } from 'lucide-react';
 

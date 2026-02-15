@@ -1,44 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import CacheManager from "@/components/CacheManager";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-
-const ACCESS_KEY = "creatorToolsAccess";
-const CREATOR_PASSWORD = "VIVIA#2026!Zt9Kq3@Lp7";
-
-export default function CreatorTools() {
-  const [isAuthed, setIsAuthed] = useState(false);
-  const [input, setInput] = useState("");
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const stored = localStorage.getItem(ACCESS_KEY);
-    if (stored === "true") {
-      setIsAuthed(true);
-    }
-  }, []);
-
-  const isValid = useMemo(() => input.trim() === CREATOR_PASSWORD, [input]);
-
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    if (!isValid) {
-      setError("Mot de passe incorrect.");
-      return;
-    }
-    localStorage.setItem(ACCESS_KEY, "true");
-    setIsAuthed(true);
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem(ACCESS_KEY);
-    setIsAuthed(false);
-    setInput("");
-  };
-
-  return (
-    <div className="min-h-screen bg-background">
+export {};
       <Navbar />
       <main className="pt-24 md:pt-28">
         <section className="mx-auto max-w-4xl px-6 py-10">

@@ -12,7 +12,6 @@ import About from "./components/about/About";
 import ServicesPage from "./components/services/Services";
 import CookieConsent from "@/components/CookieConsent";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CreatorTools from "./pages/CreatorTools";
 import Contact from "./pages/Contact";
 const queryClient = new QueryClient();
 
@@ -32,7 +31,6 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/creator-tools" element={<CreatorTools />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
