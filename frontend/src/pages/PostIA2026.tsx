@@ -339,7 +339,7 @@ const PostIA2026 = () => {
             "@type": "BlogPosting",
             "headline": "Comment l'IA transforme les PME en 2026",
             "description": "Panorama des usages concrets de l'IA : support client, automatisation des tâches et pilotage des données.",
-            "image": "https://vivia.ai/og-image- ia-2026.jpg",
+            "image": "https://vivia.fr/og-image-ia-2026.jpg",
             "datePublished": "2026-02-04",
             "dateModified": "2026-02-04",
             "author": {
@@ -351,12 +351,12 @@ const PostIA2026 = () => {
               "name": "VIVIA",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://vivia.ai/logo.png"
+                "url": "https://vivia.fr/logo.png"
               }
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://vivia.ai/blog/ia-transforme-pme-2026"
+              "@id": "https://vivia.fr/blog/ia-transforme-pme-2026"
             }
           })
         }}

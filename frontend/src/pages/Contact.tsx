@@ -223,7 +223,7 @@ const Contact = () => {
 						<CardContent className="grid gap-4 text-sm text-muted-foreground md:grid-cols-3">
 							<div>
 								<p className="text-foreground font-medium">Email</p>
-								<a className="text-primary" href="mailto:contact@vivia.ai">contact@vivia.ai</a>
+								<a className="text-primary" href="mailto:contact@vivia.fr">contact@vivia.fr</a>
 							</div>
 							<div>
 								<p className="text-foreground font-medium">Téléphone</p>
