@@ -120,8 +120,9 @@ export default function Promise() {
             {/* Main circular image */}
             <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
               <img 
-                src="/home/travail-simple-lisible-efficace-flux-donnees.jpg"
-                alt="Illustration sombre et réaliste représentant un espace de travail digital ultra-détaillé avec hologrammes, écrans et flux lumineux de données. L’image symbolise la simplification du travail, la lisibilité de l’information, la fluidité des tâches quotidiennes et la structuration des échanges entre équipes, tout en mettant en avant l’efficacité, le gain de temps et la visibilité au sein d’une organisation."
+                src="/home/travail-simple-lisible-efficace-flux-donnees.webp"
+                alt="Illustration sombre et réaliste représentant un espace de travail digital ultra-détaillé avec hologrammes, écrans et flux lumineux de données. L'image symbolise la simplification du travail, la lisibilité de l'information, la fluidité des tâches quotidiennes et la structuration des échanges entre équipes, tout en mettant en avant l'efficacité, le gain de temps et la visibilité au sein d'une organisation."
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -129,14 +130,15 @@ export default function Promise() {
               {/* Small circular thumbnails */}
               <div className="absolute -left-3 bottom-5 w-20 h-20 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_16px_rgba(34,211,238,0.25)] animate-[float_7s_ease-in-out_infinite]">
                 <img
-                  src="/home/test.jpg"
+                  src="/home/test.webp"
                   alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -right-4 top-8 w-16 h-16 rounded-full overflow-hidden border border-violet-400/50 shadow-[0_0_24px_rgba(139,92,246,0.45)] animate-[float_6s_ease-in-out_infinite]">
                 <img
-                  src="/home/vivia-approche-eprouvee-equipes-engagees.jpg"
+                  src="/home/vivia-approche-eprouvee-equipes-engagees.webp"
                   alt="Image sombre et réaliste montrant des équipes professionnelles collaborant dans un environnement de travail moderne, illustrant une approche éprouvée et une adoption durable sur le terrain."
                   className="w-full h-full object-cover"
                 />

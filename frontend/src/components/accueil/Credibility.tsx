@@ -192,8 +192,9 @@ export default function Credibility() {
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
           >
             <img 
-              src="/home/vivia-approche-eprouvee-equipes-engagees.jpg"
+              src="/home/vivia-approche-eprouvee-equipes-engagees.webp"
               alt="Image sombre et réaliste montrant des équipes professionnelles collaborant dans un environnement de travail moderne, illustrant une approche éprouvée et une adoption durable sur le terrain."
+              loading="lazy"
               className="w-full h-44 md:h-52 lg:h-60 object-cover rounded-xl"
             />
           </motion.div>

@@ -21,11 +21,13 @@ export default function Hero() {
     <section className="relative min-h-[100svh] md:min-h-screen overflow-hidden p-10">
       <div className="absolute inset-0 z-0">
         <video 
-          src="/video1.mp4"
+          src="/video1-optimized.mp4"
+          poster="/video1-poster.webp"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />

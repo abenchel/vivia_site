@@ -71,8 +71,8 @@ export default function HeroSection() {
             <div className="rounded-[2.5rem] border border-white/15 bg-white/5 backdrop-blur-xl p-4 shadow-2xl">
               <div className="group relative overflow-hidden rounded-3xl aspect-[4/3]">
                 <img
-                  src="/services/consulting.jpg"
-                  alt="Ateliers stratégiques et accompagnement VIVIA"
+                  src="/services/consulting.webp"
+                  alt="Services de consulting en automatisation - expertise stratégique pour la transformation numérique des processus"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />

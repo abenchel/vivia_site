@@ -8,8 +8,8 @@ type HeroSectionProps = {
 };
 
 const heroImages = [
-  { src: "/services/data.jpg", alt: "Pilotage data et tableaux de bord", title: "Data & Pilotage" },
-  { src: "/services/ai.jpg", alt: "IA appliquée aux opérations", title: "IA Appliquée" },
+  { src: "/services/data.webp", alt: "Pilotage data et tableaux de bord - visualisation intelligente des données métier en temps réel", title: "Data & Pilotage" },
+  { src: "/services/ai.webp", alt: "IA appliquée aux opérations - automatisation intelligente des processus métier par algorithmes d'apprentissage machine", title: "IA Appliquée" },
 ];
 
 export default function HeroSection({ isVisible }: HeroSectionProps) {
@@ -108,8 +108,8 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
           <div className="group relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 hover:scale-[1.03] hover:border-violet-400/50">
             <div className="relative overflow-hidden aspect-[16/10]">
               <img
-                src="/services/automation.jpg"
-                alt="Automatisation des processus métiers"
+                src="/services/automation.webp"
+                alt="Automatisation robuste des processus métier - élimination des tâches répétitives et amélioration de la fiabilité opérationnelle"
                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1"
                 loading="lazy"
               />

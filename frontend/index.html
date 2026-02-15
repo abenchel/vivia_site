@@ -20,12 +20,17 @@
     <meta name="twitter:image" content="/og-image.png" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://your-domain.com/" />
+    <link rel="canonical" href="https://vivia.ai/" />
 
     <!-- Hreflang for languages -->
-    <link rel="alternate" href="https://your-domain.com/" hreflang="fr" />
-    <link rel="alternate" href="https://your-domain.com/en/" hreflang="en" />
-    <link rel="alternate" href="https://your-domain.com/es/" hreflang="es" />
+    <link rel="alternate" href="https://vivia.ai/" hreflang="fr" />
+    <link rel="alternate" href="https://vivia.ai/en/" hreflang="en" />
+
+    <!-- Additional SEO meta tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#000000" />
 
     <!-- Prevent theme flash: set initial dark/light class before React mounts -->
     <style>
@@ -64,12 +69,18 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "VIVIA",
-        "url": "https://your-domain.com",
-        "logo": "https://your-domain.com/logo2.svg",
+        "url": "https://vivia.ai",
+        "logo": "https://vivia.ai/logo2.svg",
+        "description": "Automatisation et exécution opérationnelle pour PME - optimisez vos processus métier",
         "sameAs": [
-          "https://www.linkedin.com/company/your-company",
+          "https://www.linkedin.com/company/vivia",
           "https://twitter.com/VIVIA"
-        ]
+        ],
+        "contact": {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "email": "contact@vivia.ai"
+        }
       }
     </script>
 
@@ -77,11 +88,12 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://your-domain.com/",
+        "url": "https://vivia.ai/",
         "name": "VIVIA",
+        "description": "Automatisez vos processus métier et améliorez l'exécution opérationnelle",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://your-domain.com/?s={search_term_string}",
+          "target": "https://vivia.ai/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }

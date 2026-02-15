@@ -60,8 +60,9 @@ export default function TargetAudience() {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
         >
           <img 
-            src="/home/automatisation-pme-equipes-tableaux-bord.jpg"
+            src="/home/automatisation-pme-equipes-tableaux-bord.webp"
             alt="Illustration représentant une équipe travaillant sur des tableaux de bord numériques et des processus automatisés en entreprise."
+            loading="lazy"
             className="w-full h-44 md:h-52 lg:h-60 object-cover rounded-xl"
           />
         </motion.div>

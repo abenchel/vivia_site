@@ -35,8 +35,8 @@ export default function StorySection() {
         <div className="group relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl hover:shadow-violet-500/40 transition-all duration-700 hover:scale-[1.03] hover:border-violet-400/50">
           <div className="relative overflow-hidden aspect-[4/3]">
             <img
-              src="/about/team-workshop.jpg"
-              alt="Équipe VIVIA en atelier"
+              src="/about/team-workshop.webp"
+              alt="Équipe VIVIA collaborant lors d'un atelier de travail - moment de créativité et d'échange collectif sur les solutions d'automatisation"
               className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1"
               loading="lazy"
             />
