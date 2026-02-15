@@ -36,10 +36,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-base"></span>
-              </div>
-              <span className="text-lg font-bold text-foreground">VIVIA</span>
+              <img src="/icon-4.svg" alt="VIVIA Logo" className="w-12 h-12 " />
+              <span className="text-2xl font-bold mt-4 font-sans">VIVIA</span>
             </div>
             <p className="text-muted-foreground mb-5 max-w-sm text-sm leading-relaxed">
               Automatisation & IA pour PME. Réduisez les tâches répétitives, accélérez vos processus, 
