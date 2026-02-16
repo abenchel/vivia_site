@@ -1,14 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Zap } from "lucide-react";
 import { benefits, quickPlanItems } from "../data";
+import { useLocale } from '@/lib/locale';
 
 export default function BenefitsSection() {
+  const { t } = useLocale();
   return (
     <section className="mx-auto max-w-6xl px-6 pb-20">
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-            Ce que vos équipes gagnent
+            {t('services.benefits.title')}
           </h2>
           <ul className="space-y-4">
             {benefits.map((benefit, index) => (
@@ -19,7 +21,7 @@ export default function BenefitsSection() {
               >
                 <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 font-medium">
-                  {benefit}
+                  {t(`services.benefits.items.${benefit}`)}
                 </span>
               </li>
             ))}
@@ -31,9 +33,9 @@ export default function BenefitsSection() {
           <CardHeader className="relative">
             <div className="flex items-center gap-3 mb-2">
               <Zap className="w-5 h-5 text-violet-400" />
-              <CardTitle className="text-2xl">Plan d'action rapide</CardTitle>
+              <CardTitle className="text-2xl">{t('services.quickPlan.title')}</CardTitle>
             </div>
-            <CardDescription className="text-base">Un cadre clair pour avancer en 30 jours.</CardDescription>
+            <CardDescription className="text-base">{t('services.quickPlan.description')}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3 relative">
             {quickPlanItems.map((item) => (
@@ -42,7 +44,7 @@ export default function BenefitsSection() {
                 className="flex items-center gap-3 text-sm text-muted-foreground p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item cursor-pointer"
               >
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-violet-400 to-cyan-400 group-hover/item:scale-150 transition-transform duration-300" />
-                <span className="group-hover/item:text-foreground transition-colors duration-300">{item}</span>
+                <span className="group-hover/item:text-foreground transition-colors duration-300">{t(`services.quickPlan.items.${item}`)}</span>
               </div>
             ))}
           </CardContent>

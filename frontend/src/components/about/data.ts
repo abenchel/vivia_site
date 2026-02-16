@@ -2,59 +2,52 @@ import { Users, Target, Rocket, ShieldCheck } from "lucide-react";
 
 export const aboutHighlights = [
   {
-    title: "Vision claire",
-    description: "Une stratégie lisible pour guider chaque décision.",
+    id: "vision",
     icon: "✨",
   },
   {
-    title: "Expertise terrain",
-    description: "Des solutions pensées pour les PME et leurs équipes.",
+    id: "expertise",
     icon: "🤝",
   },
   {
-    title: "Impact mesurable",
-    description: "Des gains concrets suivis avec des indicateurs précis.",
+    id: "impact",
     icon: "📈",
   },
 ];
 
 export const aboutStats = [
-  { value: "150+", label: "Clients satisfaits" },
-  { value: "40%", label: "Temps économisé" },
-  { value: "24/7", label: "Support disponible" },
-  { value: "98%", label: "Taux de réussite" },
+  { value: "150+", id: "clients" },
+  { value: "40%", id: "time" },
+  { value: "24/7", id: "support" },
+  { value: "98%", id: "success" },
 ];
 
 export const aboutValues = [
   {
     icon: Users,
-    title: "Humain d'abord",
-    description: "Nous co-construisons avec vos équipes pour une adoption durable.",
+    id: "human",
   },
   {
     icon: Target,
-    title: "Orientation résultat",
-    description: "Chaque action est pensée pour générer un impact mesurable.",
+    id: "result",
   },
   {
     icon: Rocket,
-    title: "Exécution rapide",
-    description: "Des itérations courtes pour livrer vite et bien.",
+    id: "execution",
   },
   {
     icon: ShieldCheck,
-    title: "Fiabilité",
-    description: "Des solutions robustes, sécurisées et conformes RGPD.",
+    id: "reliability",
   },
 ];
 
 export const aboutTimeline = [
   {
-    title: "2024",
-    description: "Accélération avec une offre IA appliquée aux opérations et au support client.",
+    id: "2024",
+    year: "2024",
   },
   {
-    title: "2026",
-    description: "Consolidation d'une approche complète : cadrage, delivery, adoption.",
+    id: "2026",
+    year: "2026",
   },
 ];

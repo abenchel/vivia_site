@@ -2,17 +2,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { highlights } from "../data";
 import { useEffect, useState } from "react";
+import { useLocale } from '@/lib/locale';
 
 type HeroSectionProps = {
   isVisible: boolean;
 };
 
 const heroImages = [
-  { src: "/services/data.webp", alt: "Pilotage data et tableaux de bord - visualisation intelligente des données métier en temps réel", title: "Data & Pilotage" },
-  { src: "/services/ai.webp", alt: "IA appliquée aux opérations - automatisation intelligente des processus métier par algorithmes d'apprentissage machine", title: "IA Appliquée" },
+  { id: "data", src: "/services/data.webp" },
+  { id: "ai", src: "/services/ai.webp" },
 ];
 
 export default function HeroSection({ isVisible }: HeroSectionProps) {
+  const { t } = useLocale();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -43,26 +45,20 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
         <div className="flex flex-col gap-8">
           <div className="inline-flex self-start items-center gap-2 rounded-full border border-violet-400/30 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 backdrop-blur-md px-5 py-2 text-xs uppercase tracking-[0.25em] text-violet-300 font-semibold shadow-lg shadow-violet-500/20 hover:shadow-violet-500/40 transition-all duration-500 hover:scale-105 hover:border-violet-400/50 cursor-pointer group">
             <Sparkles className="w-3.5 h-3.5 text-violet-400 group-hover:animate-spin" />
-            Services Premium
+            {t('services.badge')}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black leading-[1.1]">
-            <span className="block text-foreground mb-2">
-              Des solutions concrètes pour
-            </span>
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 animate-gradient bg-[length:200%_auto]">
-              accélérer vos équipes
-            </span>
+            <span className="block text-foreground mb-2">{t('services.titleLine1')}</span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 animate-gradient bg-[length:200%_auto]">{t('services.titleLine2')}</span>
           </h1>
 
-          <p className="max-w-xl text-xl text-muted-foreground/90 leading-relaxed">
-            Nous combinons automatisation, data et IA pour transformer vos opérations sans perturber votre quotidien.
-          </p>
+          <p className="max-w-xl text-xl text-muted-foreground/90 leading-relaxed">{t('services.subtitle')}</p>
 
           <div className="grid gap-4 sm:grid-cols-3">
-            {highlights.map((item, index) => (
+            {highlights.map((item) => (
               <div
-                key={item.title}
+                key={item.id}
                 className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl p-5 hover:border-violet-400/30 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20 cursor-pointer overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 via-cyan-500/0 to-violet-500/0 group-hover:from-violet-500/10 group-hover:via-cyan-500/5 group-hover:to-violet-500/10 transition-all duration-500 rounded-2xl" />
@@ -71,8 +67,8 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
                   <div className="text-3xl mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                     {item.icon}
                   </div>
-                  <p className="text-foreground font-bold mb-2 text-base">{item.title}</p>
-                  <p className="text-muted-foreground/80 text-sm leading-relaxed">{item.description}</p>
+                  <p className="text-foreground font-bold mb-2 text-base">{t(`services.highlights.${item.id}.title`)}</p>
+                  <p className="text-muted-foreground/80 text-sm leading-relaxed">{t(`services.highlights.${item.id}.description`)}</p>
                 </div>
               </div>
             ))}
@@ -84,8 +80,8 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
               size="lg" 
               className="group relative overflow-hidden bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 text-white font-bold px-8 py-6 text-base rounded-xl shadow-2xl shadow-violet-500/50 hover:shadow-violet-500/70 transition-all duration-500 hover:scale-105 border-0"
             >
-              <a href="/contact" className="flex items-center gap-3">
-                <span className="relative z-10">Demander un diagnostic</span>
+                <a href="/contact" className="flex items-center gap-3">
+                <span className="relative z-10">{t('services.cta.book')}</span>
                 <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-2 duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </a>
@@ -97,9 +93,7 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
               size="lg" 
               className="group backdrop-blur-xl bg-white/5 hover:bg-white/10 border-2 border-white/20 hover:border-violet-400/50 text-foreground font-semibold px-8 py-6 text-base rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-violet-500/20"
             >
-              <a href="/About">
-                Découvrir notre méthode
-              </a>
+              <a href="/About">{t('services.cta.method')}</a>
             </Button>
           </div>
         </div>
@@ -109,7 +103,7 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
             <div className="relative overflow-hidden aspect-[16/10]">
               <img
                 src="/services/automation.webp"
-                alt="Automatisation robuste des processus métier - élimination des tâches répétitives et amélioration de la fiabilité opérationnelle"
+                alt={t('services.featuredImage.alt')}
                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1"
                 loading="lazy"
               />
@@ -117,9 +111,9 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
               <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white text-xl font-bold mb-1">Automatisation intelligente</h3>
+                <h3 className="text-white text-xl font-bold mb-1">{t('services.featuredImage.title')}</h3>
                 <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                  Optimisez vos processus métiers
+                  {t('services.featuredImage.description')}
                 </p>
               </div>
             </div>
@@ -128,13 +122,13 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
           <div className="grid gap-4 sm:grid-cols-2">
             {heroImages.map((img, index) => (
               <div
-                key={img.title}
+                key={img.id}
                 className="group relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-xl hover:shadow-cyan-500/40 transition-all duration-700 hover:scale-[1.05] hover:border-cyan-400/50"
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={img.src}
-                    alt={img.alt}
+                    alt={t(`services.heroImages.${img.id}.alt`)}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-2"
                     loading="lazy"
                   />
@@ -142,7 +136,7 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 via-transparent to-violet-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                    <h4 className="text-white text-base font-bold">{img.title}</h4>
+                    <h4 className="text-white text-base font-bold">{t(`services.heroImages.${img.id}.title`)}</h4>
                     <div className="h-0.5 w-0 group-hover:w-12 bg-gradient-to-r from-cyan-400 to-violet-400 transition-all duration-500 mt-2 rounded-full" />
                   </div>
                 </div>

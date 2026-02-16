@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useLocale } from '@/lib/locale';
 import LanguageToggle from './LanguageToggle';
 import { Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const navLinks = [
   { labelKey: 'nav.home', href: '/' },
@@ -15,9 +16,14 @@ const navLinks = [
 
 export default function Navbar() {
   const { t } = useLocale();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+
+  const isActive = (href: string) => {
+    return location.pathname === href;
+  };
 
   useEffect(() => {
     let scrollTimeout: number | null = null;
@@ -79,7 +85,11 @@ export default function Navbar() {
               <a
                 key={link.labelKey}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isActive(link.href)
+                    ? 'text-foreground border-b-2 border-violet-500 pb-1'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {t(link.labelKey)}
               </a>

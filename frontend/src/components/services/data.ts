@@ -3,29 +3,25 @@ import { Sparkles, LineChart, Bot, ShieldCheck } from "lucide-react";
 export const pillars = [
   {
     icon: Sparkles,
-    title: "Automatisation intelligente",
-    description: "Workflows sur-mesure pour supprimer les tâches répétitives et accélérer vos opérations.",
+    id: "automation",
     gradient: "from-violet-500/20 to-violet-600/20",
     iconColor: "text-violet-400",
   },
   {
     icon: LineChart,
-    title: "Data & pilotage",
-    description: "Tableaux de bord clairs pour suivre vos KPIs et prendre des décisions rapides.",
+    id: "data",
     gradient: "from-cyan-500/20 to-cyan-600/20",
     iconColor: "text-cyan-400",
   },
   {
     icon: Bot,
-    title: "IA appliquée",
-    description: "Cas d'usage concrets : support, scoring, génération de contenu et analyse avancée.",
+    id: "ai",
     gradient: "from-violet-500/20 via-cyan-500/10 to-violet-500/20",
     iconColor: "text-violet-400",
   },
   {
     icon: ShieldCheck,
-    title: "Accompagnement",
-    description: "Cadrage, formation et adoption terrain pour maximiser l'impact.",
+    id: "support",
     gradient: "from-cyan-500/20 via-violet-500/10 to-cyan-500/20",
     iconColor: "text-cyan-400",
   },
@@ -33,50 +29,44 @@ export const pillars = [
 
 export const highlights = [
   {
-    title: "Déploiement rapide",
-    description: "Des premiers résultats visibles en quelques semaines.",
+    id: "speed",
     icon: "⚡",
   },
   {
-    title: "Intégrations natives",
-    description: "Connexion à vos outils actuels sans friction.",
+    id: "integrations",
     icon: "🔗",
   },
   {
-    title: "Sécurité & conformité",
-    description: "Hébergement sécurisé et respect des normes RGPD.",
+    id: "security",
     icon: "🔒",
   },
 ];
 
 export const processSteps = [
   {
-    title: "Cadrage",
-    description: "Audit express et priorisation des quick wins.",
+    id: "framing",
     color: "border-violet-500/50 bg-violet-500/10",
   },
   {
-    title: "Implémentation",
-    description: "Automatisations, dashboards et IA livrés par itérations.",
+    id: "implementation",
     color: "border-cyan-500/50 bg-cyan-500/10",
   },
   {
-    title: "Adoption",
-    description: "Formation des équipes et suivi des résultats.",
+    id: "adoption",
     color: "border-violet-500/50 bg-violet-500/10",
   },
 ];
 
 export const benefits = [
-  "Réduction des coûts opérationnels",
-  "Gain de temps immédiat",
-  "Meilleure visibilité sur la performance",
-  "Expérience client améliorée",
+  "cost",
+  "time",
+  "visibility",
+  "experience",
 ];
 
 export const quickPlanItems = [
-  "Audit express des processus",
-  "Priorités d'automatisation",
-  "Prototype livré en 2 semaines",
-  "Formation & adoption terrain",
+  "audit",
+  "priorities",
+  "prototype",
+  "training",
 ];

@@ -9,12 +9,18 @@ const AVAILABLE: { code: string; label: string }[] = [
 export default function LanguageToggle() {
   const { lang, setLang } = useLocale();
 
+  const handleLanguageChange = (newLang: string) => {
+    setLang(newLang as any);
+    // Auto-refresh the page when language changes
+    window.location.reload();
+  };
+
   return (
     <label className="flex items-center gap-2">
       <select
         aria-label="Select language"
         value={lang}
-        onChange={(e) => setLang(e.target.value as any)}
+        onChange={(e) => handleLanguageChange(e.target.value)}
         className="bg-transparent text-sm px-2 py-1 rounded border border-border/20"
       >
         {AVAILABLE.map((a) => (

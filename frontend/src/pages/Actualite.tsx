@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import useReveal from "@/hooks/use-reveal";
+import { useLocale } from '@/lib/locale';
 
 const updates = [
   {
@@ -32,6 +33,8 @@ const updates = [
 
 const Actualite = () => {
   useReveal();
+  const { t } = useLocale();
+  const updateIndices = [0,1,2,3];
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -50,13 +53,13 @@ const Actualite = () => {
             {/* Overlay pour le texte */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 bg-gradient-to-t from-background/90 via-background/50 to-transparent">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground w-fit">
-                Actualités
+                {t('news.badge')}
               </div>
               <h1 className="mt-4 text-3xl md:text-5xl font-semibold text-foreground">
-                Les dernières nouvelles de VIVIA
+                {t('news.h1')}
               </h1>
               <p className="mt-3 max-w-2xl text-muted-foreground">
-                Suivez nos annonces, événements et mises à jour produit en temps réel.
+                {t('news.subtitle')}
               </p>
             </div>
           </div>
@@ -64,15 +67,15 @@ const Actualite = () => {
 
         <section className="mx-auto max-w-6xl px-6 py-12 md:py-20">
           <div className="grid gap-6 md:grid-cols-2">
-            {updates.map((update) => (
-              <Card key={update.title} className="border-white/10 bg-card/30 reveal-on-scroll card-hover-lift">
+            {updateIndices.map((i) => (
+              <Card key={i} className="border-white/10 bg-card/30 reveal-on-scroll card-hover-lift">
                 <CardHeader>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">{update.tag}</span>
-                    <span>{update.date}</span>
+                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">{t(`news.updates.${i}.tag`)}</span>
+                    <span>{t(`news.updates.${i}.date`)}</span>
                   </div>
-                  <CardTitle className="text-xl">{update.title}</CardTitle>
-                  <CardDescription>{update.excerpt}</CardDescription>
+                  <CardTitle className="text-xl">{t(`news.updates.${i}.title`)}</CardTitle>
+                  <CardDescription>{t(`news.updates.${i}.excerpt`)}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="h-20 rounded-lg bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent" />
