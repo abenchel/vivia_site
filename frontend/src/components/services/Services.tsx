@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import BackgroundEffects from "./sections/BackgroundEffects";
 import HeroSection from "./sections/HeroSection";
-import PillarsSection from "./sections/PillarsSection";
+import PillarsCarousel from "./sections/PillarsCarousel";
 import ProcessSection from "./sections/ProcessSection";
 import BenefitsSection from "./sections/BenefitsSection";
 import FinalCTASection from "./sections/FinalCTASection";
@@ -16,12 +16,23 @@ export default function ServicesPage() {
   useEffect(() => {
     setIsVisible(true);
     
+    // Preload first carousel image for better LCP
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = '/services/piloter.webp';
+    link.type = 'image/webp';
+    document.head.appendChild(link);
+    
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      document.head.removeChild(link);
+    };
   }, []);
 
   return (
@@ -30,8 +41,8 @@ export default function ServicesPage() {
       <Navbar />
 
       <main className="pt-6 md:pt-10 relative z-10 py-0">
-        <HeroSection isVisible={isVisible} />
-        <PillarsSection />
+        {/* <HeroSection isVisible={isVisible} /> */}
+        <PillarsCarousel />
         <ProcessSection />
         <BenefitsSection />
         <FinalCTASection />

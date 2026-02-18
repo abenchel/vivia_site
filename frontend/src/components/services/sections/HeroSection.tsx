@@ -55,6 +55,11 @@ export default function HeroSection({ isVisible }: HeroSectionProps) {
 
           <p className="max-w-xl text-xl text-muted-foreground/90 leading-relaxed">{t('services.subtitle')}</p>
 
+          <div className="inline-flex self-start items-center gap-2 rounded-lg border border-violet-400/20 bg-gradient-to-r from-violet-500/5 to-cyan-500/5 backdrop-blur-md px-4 py-2 text-xs text-violet-300/80 font-medium">
+            <Sparkles className="w-3 h-3 text-violet-400" />
+            {t('services.techNote')}
+          </div>
+
           <div className="grid gap-4 sm:grid-cols-3">
             {highlights.map((item) => (
               <div

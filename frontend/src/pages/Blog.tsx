@@ -58,8 +58,8 @@ const Blog = () => {
         <section className="mx-auto max-w-6xl px-6 pb-20">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {postIndices.map((i) => (
-              <Card key={i} className="border-white/10 bg-card/30 reveal-on-scroll card-hover-lift">
-                <CardHeader>
+              <Card key={i} className="border-white/10 bg-card/30 reveal-on-scroll card-hover-lift flex flex-col">
+                <CardHeader className="flex-1">
                   <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                     <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">{t(`blog.posts.${i}.category`)}</span>
                     <span>{t(`blog.posts.${i}.date`)}</span>
@@ -68,7 +68,7 @@ const Blog = () => {
                   <CardTitle className="text-xl">{t(`blog.posts.${i}.title`)}</CardTitle>
                   <CardDescription>{t(`blog.posts.${i}.excerpt`)}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <div className="h-24 rounded-lg bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent" />
                 </CardContent>
                 <CardFooter>

@@ -1,29 +1,33 @@
-import { Sparkles, LineChart, Bot, ShieldCheck } from "lucide-react";
+import { Brain, Database, Zap, MessageSquare } from "lucide-react";
 
 export const pillars = [
   {
-    icon: Sparkles,
-    id: "automation",
+    icon: Brain,
+    id: "conseiller",
     gradient: "from-violet-500/20 to-violet-600/20",
     iconColor: "text-violet-400",
+    image: "/services/conseiller.webp",
   },
   {
-    icon: LineChart,
-    id: "data",
+    icon: Database,
+    id: "piloter",
     gradient: "from-cyan-500/20 to-cyan-600/20",
     iconColor: "text-cyan-400",
+    image: "/services/piloter.webp",
   },
   {
-    icon: Bot,
-    id: "ai",
+    icon: Zap,
+    id: "executer",
     gradient: "from-violet-500/20 via-cyan-500/10 to-violet-500/20",
     iconColor: "text-violet-400",
+    image: "/services/executer.webp",
   },
   {
-    icon: ShieldCheck,
-    id: "support",
+    icon: MessageSquare,
+    id: "interagir",
     gradient: "from-cyan-500/20 via-violet-500/10 to-cyan-500/20",
     iconColor: "text-cyan-400",
+    image: "/services/interagir.webp",
   },
 ];
 

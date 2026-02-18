@@ -73,22 +73,51 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
     solutions: {
       title: "Des solutions concrètes pour chaque étape de votre organisation",
       intro: "VIVIA accompagne les organisations autour de quatre grands besoins :",
+      result: "Résultat",
       pillars: [
         {
-          title: "Conseiller",
-          description: "Clarifier la direction et aligner les équipes"
+          title: "CONSEILLER : VIVIA Advisory",
+          description: "Donner une direction claire et partagée",
+          servicesTitle: "Apports clés",
+          services: [
+            "lecture claire de l'organisation, par un audit",
+            "priorités partagées entre direction, terrain et support",
+            "feuille de route réaliste"
+          ],
+          result: "Alignement, lisibilité et dynamique collective."
         },
         {
-          title: "Piloter",
-          description: "Structurer l'information et les actifs"
+          title: "PILOTER : Structurer l'information utile et gagner en productivité",
+          description: "VIVIA Control : Le site comme point d'entrée",
+          servicesTitle: "Services",
+          services: [
+            "informations claires pour tous",
+            "formulaires utiles aux équipes terrain et support",
+            "accès rapide aux ressources clés"
+          ],
+          result: "Moins de friction, plus d'autonomie, meilleure coordination."
         },
         {
-          title: "Exécuter",
-          description: "Automatiser les processus opérationnels"
+          title: "EXÉCUTER : Simplifier le quotidien",
+          description: "VIVIA Flow : Automatisation des tâches",
+          servicesTitle: "Solutions",
+          services: [
+            "génération de documents terrain",
+            "mises à jour automatiques",
+            "notifications claires"
+          ],
+          result: "Moins de charge mentale, plus de continuité, meilleure fiabilité."
         },
         {
-          title: "Interagir",
-          description: "Faciliter la communication interne et externe"
+          title: "INTERAGIR : Faciliter les échanges",
+          description: "VIVIA Voice : Assistants internes et externes",
+          servicesTitle: "Outils",
+          services: [
+            "réponses aux équipes terrain",
+            "support RH accessible",
+            "disponibilité continue"
+          ],
+          result: "Des échanges fluides et utiles à tous."
         }
       ]
     },
@@ -110,10 +139,11 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
       description: "Audit gratuit de 30 minutes : identifiez vos opportunités d'automatisation et estimez vos gains de temps et d'argent."
     },
     services: {
-      badge: "Services Premium",
-      titleLine1: "Des solutions concrètes pour",
-      titleLine2: "accélérer vos équipes",
-      subtitle: "Nous combinons automatisation, data et IA pour transformer vos opérations sans perturber votre quotidien.",
+      badge: "Solutions",
+      titleLine1: "Des services conçus pour le terrain,",
+      titleLine2: "les RH et la direction",
+      subtitle: "VIVIA intervient à chaque étape, de la décision à l'exécution quotidienne.",
+      techNote: "Technologies IA : RAG, LLM, Agents ChatGPT pour l'automatisation intelligente",
       cta: { book: "Demander un diagnostic", method: "Découvrir notre méthode" },
       highlights: {
         speed: { title: "Déploiement rapide", description: "Des premiers résultats visibles en quelques semaines." },
@@ -391,22 +421,51 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
     solutions: {
       title: "Concrete solutions for every stage of your organization",
       intro: "VIVIA supports organizations around four major needs:",
+      result: "Result",
       pillars: [
         {
-          title: "Advise",
-          description: "Clarify direction and align teams"
+          title: "ADVISE: VIVIA Advisory",
+          description: "Provide clear and shared direction",
+          servicesTitle: "Key contributions",
+          services: [
+            "clear understanding of the organization through audit",
+            "shared priorities between management, field and support",
+            "realistic roadmap"
+          ],
+          result: "Alignment, clarity and collective momentum."
         },
         {
-          title: "Control",
-          description: "Structure information and assets"
+          title: "CONTROL: Structure useful information and boost productivity",
+          description: "VIVIA Control: The site as entry point",
+          servicesTitle: "Services",
+          services: [
+            "clear information for everyone",
+            "useful forms for field and support teams",
+            "quick access to key resources"
+          ],
+          result: "Less friction, more autonomy, better coordination."
         },
         {
-          title: "Execute",
-          description: "Automate operational processes"
+          title: "EXECUTE: Task automation",
+          description: "VIVIA Flow: Task automation",
+          servicesTitle: "Solutions",
+          services: [
+            "automated document generation",
+            "automatic updates",
+            "clear notifications"
+          ],
+          result: "Less mental load, more continuity, better reliability."
         },
         {
-          title: "Interact",
-          description: "Facilitate internal and external communication"
+          title: "INTERACT: Facilitate exchanges",
+          description: "VIVIA Voice: Internal and external assistants",
+          servicesTitle: "Tools",
+          services: [
+            "responses for field teams",
+            "accessible HR support",
+            "continuous availability"
+          ],
+          result: "Smooth and useful exchanges for everyone."
         }
       ]
     },
@@ -428,10 +487,11 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
       description: "A 30-minute conversation can identify concrete and useful levers for each team."
     },
     services: {
-      badge: "Premium Services",
-      titleLine1: "Concrete solutions to",
-      titleLine2: "speed up your teams",
-      subtitle: "We combine automation, data and AI to transform your operations without disrupting your day-to-day.",
+      badge: "Solutions",
+      titleLine1: "Services designed for the field,",
+      titleLine2: "HR and management",
+      subtitle: "VIVIA intervenes at every stage, from decision to daily execution.",
+      techNote: "AI Technologies: RAG, LLM, ChatGPT Agents for intelligent automation",
       cta: { book: "Request a diagnostic", method: "Discover our method" },
       highlights: {
         speed: { title: "Rapid deployment", description: "First results visible within weeks." },
@@ -701,22 +761,51 @@ const TRANSLATIONS: Record<Lang, Record<string, any>> = {
     solutions: {
       title: "Soluciones concretas para cada etapa de su organización",
       intro: "VIVIA acompaña a las organizaciones en cuatro grandes necesidades:",
+      result: "Resultado",
       pillars: [
         {
-          title: "Asesorar",
-          description: "Aclarar la dirección y alinear equipos"
+          title: "ASESORAR: VIVIA Advisory",
+          description: "Proporcionar una dirección clara y compartida",
+          servicesTitle: "Contribuciones clave",
+          services: [
+            "Comprensión clara de la organización mediante auditoría",
+            "Prioridades compartidas entre dirección, campo y soporte",
+            "Hoja de ruta realista"
+          ],
+          result: "Alineación, claridad e impulso colectivo."
         },
         {
-          title: "Gestionar",
-          description: "Estructurar la información y los activos"
+          title: "CONTROLAR: Estructurar información útil e impulsar la productividad",
+          description: "VIVIA Control: El sitio como punto de entrada",
+          servicesTitle: "Servicios",
+          services: [
+            "Información clara para todos",
+            "Formularios útiles para equipos de campo y soporte",
+            "Acceso rápido a recursos clave"
+          ],
+          result: "Menos fricción, más autonomía, mejor coordinación."
         },
         {
-          title: "Ejecutar",
-          description: "Automatizar los procesos operativos"
+          title: "EJECUTAR: Automatización de tareas",
+          description: "VIVIA Flow: Automatización de tareas",
+          servicesTitle: "Soluciones",
+          services: [
+            "Generación automática de documentos",
+            "Actualizaciones automáticas",
+            "Notificaciones claras"
+          ],
+          result: "Menos carga mental, más continuidad, mayor fiabilidad."
         },
         {
-          title: "Interactuar",
-          description: "Facilitar la comunicación interna y externa"
+          title: "INTERACTUAR: Facilitar intercambios",
+          description: "VIVIA Voice: Asistentes internos y externos",
+          servicesTitle: "Herramientas",
+          services: [
+            "Respuestas para equipos de campo",
+            "Soporte de RR.HH. accesible",
+            "Disponibilidad continua"
+          ],
+          result: "Intercambios fluidos y útiles para todos."
         }
       ]
     },

@@ -68,8 +68,8 @@ const Actualite = () => {
         <section className="mx-auto max-w-6xl px-6 py-12 md:py-20">
           <div className="grid gap-6 md:grid-cols-2">
             {updateIndices.map((i) => (
-              <Card key={i} className="border-white/10 bg-card/30 reveal-on-scroll card-hover-lift">
-                <CardHeader>
+              <Card key={i} className="border-white/10 bg-card/30 reveal-on-scroll card-hover-lift flex flex-col">
+                <CardHeader className="flex-1">
                   <div className="flex items-center gap-3 text-xs text-muted-foreground">
                     <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">{t(`news.updates.${i}.tag`)}</span>
                     <span>{t(`news.updates.${i}.date`)}</span>
@@ -77,7 +77,7 @@ const Actualite = () => {
                   <CardTitle className="text-xl">{t(`news.updates.${i}.title`)}</CardTitle>
                   <CardDescription>{t(`news.updates.${i}.excerpt`)}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <div className="h-20 rounded-lg bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent" />
                 </CardContent>
               </Card>
