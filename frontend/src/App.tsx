@@ -21,7 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <CookieConsent />
-      <BrowserRouter>
+      <BrowserRouter basename="/vivia_site">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
