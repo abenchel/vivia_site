@@ -6,12 +6,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useLocale } from '@/lib/locale';
 
-// steps will be read from translations at render time
+const steps = [
+	{
+		title: "30 minutes avec un expert",
+		description: "Un échange structuré pour comprendre vos objectifs et vos irritants opérationnels.",
+	},
+	{
+		title: "Audit express des processus",
+		description: "Identification des 3 gains rapides et des leviers d’automatisation prioritaires.",
+	},
+	{
+		title: "Plan d’action clair",
+		description: "Une synthèse simple avec priorités, effort estimé et impact attendu.",
+	},
+];
 
 const Contact = () => {
-	const { t } = useLocale();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 	const [form, setForm] = useState({
@@ -21,7 +32,8 @@ const Contact = () => {
 		phone: "",
 		message: "",
 	});
-	const baseUrl = (import.meta.env.VITE_BACKEND_URL as string | undefined) || "";
+	// Set your backend URL directly for Cloudflare deployment
+	const baseUrl = "https://your-backend-url.com";
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = event.target;
@@ -68,31 +80,31 @@ const Contact = () => {
 			<main className="pt-24 md:pt-28">
 				<section className="mx-auto max-w-6xl px-6 py-10">
 					<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-						{t('contact.badge')}
+						Contact
 					</div>
 					<h1 className="mt-4 text-3xl md:text-5xl font-semibold text-foreground">
-						{t('contact.h1')}
+						Réserver un diagnostic productivité
 					</h1>
 					<p className="mt-3 max-w-2xl text-muted-foreground">
-						{t('contact.intro')}
+						Un format court et clair pour identifier les meilleures opportunités d’automatisation et de gains opérationnels.
 					</p>
 					<div className="mt-8 flex flex-wrap gap-3">
 						<Button asChild variant="cta" size="lg">
-							<a href="#form">{t('contact.buttons.book')}</a>
+							<a href="#form">Réserver un rendez-vous</a>
 						</Button>
 						<Button asChild variant="outline" size="lg">
-							<a href="/services">{t('contact.buttons.services')}</a>
+							<a href="/services">Voir nos services</a>
 						</Button>
 					</div>
 				</section>
 
 				<section className="mx-auto max-w-6xl px-6 pb-12">
 					<div className="grid gap-6 md:grid-cols-3">
-						{[0,1,2].map((i) => (
-							<Card key={i} className="border-white/10 bg-card/40 backdrop-blur">
+						{steps.map((step) => (
+							<Card key={step.title} className="border-white/10 bg-card/40 backdrop-blur">
 								<CardHeader>
-									<CardTitle className="text-xl">{t(`contact.steps.${i}.title`)}</CardTitle>
-									<CardDescription>{t(`contact.steps.${i}.description`)}</CardDescription>
+									<CardTitle className="text-xl">{step.title}</CardTitle>
+									<CardDescription>{step.description}</CardDescription>
 								</CardHeader>
 							</Card>
 						))}
@@ -103,62 +115,62 @@ const Contact = () => {
 					<div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
 						<Card className="border-white/10 bg-card/40 backdrop-blur">
 							<CardHeader>
-								<CardTitle>{t('contact.form.talkTitle')}</CardTitle>
-								<CardDescription>{t('contact.form.talkDesc')}</CardDescription>
+								<CardTitle>Parlons de votre contexte</CardTitle>
+								<CardDescription>Remplissez ce formulaire, nous revenons vers vous rapidement.</CardDescription>
 							</CardHeader>
 							<CardContent>
 								<form className="grid gap-4" onSubmit={handleSubmit}>
 									<div className="grid gap-2">
-										<Label htmlFor="name">{t('contact.form.labels.name')}</Label>
+										<Label htmlFor="name">Nom complet</Label>
 										<Input
 											id="name"
 											name="name"
-											placeholder={t('contact.form.placeholders.name')}
+											placeholder="Votre nom"
 											value={form.name}
 											onChange={handleChange}
 											required
 										/>
 									</div>
 									<div className="grid gap-2">
-										<Label htmlFor="company">{t('contact.form.labels.company')}</Label>
+										<Label htmlFor="company">Entreprise</Label>
 										<Input
 											id="company"
 											name="company"
-											placeholder={t('contact.form.placeholders.company')}
+											placeholder="Nom de votre entreprise"
 											value={form.company}
 											onChange={handleChange}
 											required
 										/>
 									</div>
 									<div className="grid gap-2">
-										<Label htmlFor="email">{t('contact.form.labels.email')}</Label>
+										<Label htmlFor="email">Email professionnel</Label>
 										<Input
 											id="email"
 											name="email"
 											type="email"
-											placeholder={t('contact.form.placeholders.email')}
+											placeholder="vous@entreprise.com"
 											value={form.email}
 											onChange={handleChange}
 											required
 										/>
 									</div>
 									<div className="grid gap-2">
-										<Label htmlFor="phone">{t('contact.form.labels.phone')}</Label>
+										<Label htmlFor="phone">Téléphone</Label>
 										<Input
 											id="phone"
 											name="phone"
 											type="tel"
-											placeholder={t('contact.form.placeholders.phone')}
+											placeholder="+33 6 00 00 00 00"
 											value={form.phone}
 											onChange={handleChange}
 										/>
 									</div>
 									<div className="grid gap-2">
-										<Label htmlFor="message">{t('contact.form.labels.message')}</Label>
+										<Label htmlFor="message">Objectif principal</Label>
 										<Textarea
 											id="message"
 											name="message"
-											placeholder={t('contact.form.placeholders.message')}
+											placeholder="Ex: automatiser le support, centraliser la data..."
 											rows={4}
 											value={form.message}
 											onChange={handleChange}
@@ -166,14 +178,14 @@ const Contact = () => {
 										/>
 									</div>
 									<Button type="submit" variant="cta" size="lg" className="mt-2 w-full" disabled={isSubmitting}>
-										{isSubmitting ? t('contact.form.submit.sending') : t('contact.form.submit.send')}
+										{isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
 									</Button>
 									{status === "success" && (
-										<p className="text-sm text-emerald-400">{t('contact.form.success')}</p>
+										<p className="text-sm text-emerald-400">Merci, votre demande a bien été envoyée.</p>
 									)}
 									{status === "error" && (
 										<p className="text-sm text-red-400">
-											{t('contact.form.error')}
+											Impossible d’envoyer pour le moment. Vérifiez la configuration et réessayez.
 										</p>
 									)}
 								</form>
@@ -182,19 +194,20 @@ const Contact = () => {
 
 						<Card className="border-white/10 bg-card/30 backdrop-blur">
 							<CardHeader>
-								<CardTitle>{t('contact.whatYouGet.title')}</CardTitle>
-								<CardDescription>{t('contact.whatYouGet.desc')}</CardDescription>
+								<CardTitle>Ce que vous obtenez</CardTitle>
+								<CardDescription>Un diagnostic clair, actionnable, sans engagement.</CardDescription>
 							</CardHeader>
 							<CardContent>
 								<ul className="space-y-3 text-sm text-muted-foreground">
-									{[0,1,2,3].map((i) => (
-										<li key={i}>• {t(`contact.whatYouGet.bullets.${i}`)}</li>
-									))}
+									<li>• Priorités d’automatisation adaptées à vos équipes</li>
+									<li>• Estimation des gains de temps et d’impact</li>
+									<li>• Recommandations outils & intégrations</li>
+									<li>• Prochaine étape simple et planifiée</li>
 								</ul>
 								<div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
 									<p className="text-sm text-foreground">
-										{t('contact.whatYouGet.quickReplyTitle')}
-										<span className="block text-muted-foreground">{t('contact.whatYouGet.quickReplyNote')}</span>
+										Besoin d’un créneau rapide ?
+										<span className="block text-muted-foreground">Nous répondons sous 24h ouvrées.</span>
 									</p>
 								</div>
 							</CardContent>
@@ -205,21 +218,21 @@ const Contact = () => {
 				<section className="mx-auto max-w-6xl px-6 pb-20">
 					<Card className="border-white/10 bg-card/30 backdrop-blur">
 						<CardHeader>
-							<CardTitle>{t('contact.contactDirect.title')}</CardTitle>
-							<CardDescription>{t('contact.contactDirect.desc')}</CardDescription>
+							<CardTitle>Contact direct</CardTitle>
+							<CardDescription>Si vous préférez un contact rapide.</CardDescription>
 						</CardHeader>
 						<CardContent className="grid gap-4 text-sm text-muted-foreground md:grid-cols-3">
 							<div>
-								<p className="text-foreground font-medium">{t('contact.contactDirect.emailLabel')}</p>
+								<p className="text-foreground font-medium">Email</p>
 								<a className="text-primary" href="mailto:contact@vivia.fr">contact@vivia.fr</a>
 							</div>
 							<div>
-								<p className="text-foreground font-medium">{t('contact.contactDirect.phoneLabel')}</p>
+								<p className="text-foreground font-medium">Téléphone</p>
 								<a className="text-primary" href="tel:+33123456789">+33 1 23 45 67 89</a>
 							</div>
 							<div>
-								<p className="text-foreground font-medium">{t('contact.contactDirect.locationLabel')}</p>
-								<p>{t('contact.contactDirect.location')}</p>
+								<p className="text-foreground font-medium">Localisation</p>
+								<p>Paris, France</p>
 							</div>
 						</CardContent>
 					</Card>

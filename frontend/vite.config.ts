@@ -25,6 +25,7 @@ export default defineConfig(({ mode }) => ({
     chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
+        format: 'esm',
         manualChunks: {
           // Vendor chunks - separate large libraries
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
