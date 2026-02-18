@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIVIA — Automatisation & exécution opérationnelle pour PME</title>
+    <meta name="description" content="Automatisez les tâches répétitives, sécurisez vos processus clés et améliorez l’exécution opérationnelle. Diagnostic rapide pour dirigeants et décideurs." />
+    <meta name="author" content="VIVIA" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="VIVIA — Automatisation & exécution opérationnelle" />
+    <meta property="og:description" content="Automatisez tâches répétitives, sécurisez vos processus et améliorez l'exécution. Diagnostic en 30 minutes pour identifier leviers prioritaires." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@VIVIA" />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://vivia.fr/" />
+
+    <!-- Hreflang for languages -->
+    <link rel="alternate" href="https://vivia.fr/" hreflang="fr" />
+    <link rel="alternate" href="https://vivia.fr/en/" hreflang="en" />
+
+    <!-- Additional SEO meta tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Prevent theme flash: set initial dark/light class before React mounts -->
+    <style>
+      html { 
+        opacity: 0; 
+        transition: opacity 160ms ease-in;
+        background: #000000;
+      }
+      body { 
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      (function() {
+        try {
+          document.documentElement.classList.add('dark');
+        } catch (e) {
+          /* ignore */
+        }
+        try {
+          // reveal page after theme applied
+          document.documentElement.style.opacity = '1';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "VIVIA",
+        "url": "https://vivia.fr",
+        "logo": "https://vivia.fr/logo2.svg",
+        "description": "Automatisation et exécution opérationnelle pour PME - optimisez vos processus métier",
+        "sameAs": [
+          "https://www.linkedin.com/company/vivia",
+          "https://twitter.com/VIVIA"
+        ],
+        "contact": {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "email": "contact@vivia.fr"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://vivia.fr/",
+        "name": "VIVIA",
+        "description": "Automatisez vos processus métier et améliorez l'exécution opérationnelle",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://vivia.fr/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
