@@ -1,12 +1,13 @@
-version: '3.8'
-
 services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
-      - "80:80"
+      - "5173:5173"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
     restart: unless-stopped
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
