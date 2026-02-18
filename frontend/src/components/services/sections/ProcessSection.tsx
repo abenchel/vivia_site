@@ -1,3 +1,4 @@
+import React from "react";
 import { processSteps } from "../data";
 import { useLocale } from '@/lib/locale';
 

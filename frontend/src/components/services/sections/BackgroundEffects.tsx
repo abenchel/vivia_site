@@ -1,3 +1,4 @@
+import React from "react";
 type BackgroundEffectsProps = {
   mousePosition: { x: number; y: number };
 };

@@ -1,3 +1,4 @@
+import React from "react";
 import { useLocale } from '@/lib/locale';
 
 const AVAILABLE: { code: string; label: string }[] = [

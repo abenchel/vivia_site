@@ -1,3 +1,4 @@
+import React from "react";
 import { Linkedin, Twitter, Instagram, ArrowUp } from 'lucide-react';
 
 const footerLinks = {

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { X, Cookie, Shield, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
